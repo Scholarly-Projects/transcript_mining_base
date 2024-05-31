@@ -90,7 +90,7 @@ import re
 
 def find_agriculture_terms(corpus):
     # Define a list of agriculture-related terms
-    agriculture_terms = ["harvest", "tractor", "acreage", "crop", "livestock", "field", "barn", "ranch", "garden", "orchard", "dairy", "cattle", "poultry", "equipment", "fertilizer", "seed", "irrigation", "plow", "farmhand", "hoe", "shovel", "milking", "hay", "silage", "compost", "weeding", "crop rotation", "organic", "gmo", "sustainable", "farming", "rural", "homestead", "grain", "wheat", "corn", "soybean", "potato", "apple", "berry", "honey", "apiary", "pasture", "combine", "trailer", "baler", "thresher"]
+    agriculture_terms = ["harvest", "tractor", "acreage", "crop", "livestock", "farm field", "barn building", "ranch", "garden", "orchard", "dairy", "cattle", "poultry", "equipment", "fertilizer", "seed", "irrigation", "plow", "farmhand", "hoe", "shovel", "milking", "hay", "silage", "compost", "weeding", "crop rotation", "organic", "gmo", "sustainable", "farming", "rural", "homestead", "grain crop", "wheat", "corn maize", "soybean", "potato", "apple fruit", "berry", "honey", "apiary", "pasture", "combine harvester", "trailer", "baler", "thresher"]
 
     # Initialize a Counter to tally occurrences of agriculture-related terms
     agriculture_word_freq = Counter()
@@ -150,7 +150,7 @@ import re
 
 def find_fashion_terms(corpus):
     # Define a list of fashion-related terms
-    fashion_terms = ["clothing", "fashion", "style", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "dress", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "budget", "affordable", "sale", "discount", "clearance", "shopping", "store", "retail", "department", "mall"]
+    fashion_terms = ["clothing", "fashion", "style", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "dress", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "budget", "affordable", "sale", "discount", "clearance", "shopping", "store", "retail", "department store", "mall"]
 
     # Initialize a Counter to tally occurrences of fashion-related terms
     fashion_word_freq = Counter()
@@ -180,7 +180,7 @@ import re
 
 def find_conflict_terms(corpus):
     # Define a list of conflict-related terms
-    conflict_terms = ["conflict", "war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "injury", "wound", "trauma", "ptsd", "violence", "aggression", "hostility", "tension", "fear", "anxiety", "safety", "security", "protection", "defense", "attack", "invasion", "occupation", "resistance", "rebellion", "revolution", "mobilization", "draft", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"]
+    conflict_terms = ["conflict", "war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "injury", "wound", "trauma", "ptsd", "violence", "aggression", "hostility", "fear", "anxiety", "security", "protection", "defense", "attack", "invasion", "military occupation", "resistance", "rebellion", "revolution", "mobilization", "draft", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"]
 
     # Initialize a Counter to tally occurrences of conflict-related terms
     conflict_word_freq = Counter()
@@ -240,7 +240,7 @@ import re
 
 def find_culture_terms(corpus):
     # Define a list of culture-related terms
-    culture_terms = ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "dance", "language", "dialect", "family", "history", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folk", "legends", "crafts", "skills", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"]
+    culture_terms = ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "dance", "language", "dialect", "family", "history", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "skills", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"]
 
     # Initialize a Counter to tally occurrences of culture-related terms
     culture_word_freq = Counter()
@@ -270,7 +270,7 @@ import re
 
 def find_economic_terms(corpus):
     # Define a list of the top fifty most common Spanish economic-related terms
-    economic_terms = ["employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "occupation", "career", "profession", "trade", "skill", "craft", "manual labor", "blue-collar", "white-collar", "joblessness", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "raise", "benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit", "loan", "mortgage"]  # Add more as needed
+    economic_terms = ["employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craft", "manual labor", "blue-collar", "white-collar", "unemployment", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"]
 
     # Initialize a Counter to tally occurrences of economic terms
     economic_word_freq = Counter()
@@ -390,7 +390,8 @@ import re
 
 def find_food_and_drink_terms(corpus):
     # Define a list of the top fifty most common Spanish food and drink terms
-    food_and_drink_terms = ["Potato", "Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Water", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Jam", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Preserves", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Nuts", "Raisins"]  # Add more as needed
+    food_and_drink_terms = ["Potato", "Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Water", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Marmalade", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Fruit spread", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Almonds", "Raisins"]
+
 
     # Initialize a Counter to tally occurrences of food and drink terms
     food_and_drink_word_freq = Counter()
@@ -420,7 +421,8 @@ import re
 
 def find_happiness_terms(corpus):
     # Define a list of happiness-related terms
-    happiness_terms = ["Joy", "Contentment", "Bliss", "Elation", "Cheer", "Pleasure", "Happiness", "Well-being", "Serenity", "Hopefulness", "Enjoyment", "Comfort", "Comfortable", "Euphoria", "Glee", "Amusement", "Thrill", "Radiance", "Laughter", "Smile", "Giggles", "Goodwill", "Warmth", "Affection", "Closeness","Friendship", "Companionship", "Bonding", "Belonging", "Acceptance", "Acknowledgment", "Approval", "Gratefulness", "Thankfulness"]
+    happiness_terms = ["Joy", "Contentment", "Bliss", "Elation", "Cheer", "Pleasure", "Happiness", "Well-being", "Serenity", "Hopefulness", "Enjoyment", "Comfort", "Cozy", "Euphoria", "Glee", "Amusement", "Thrill", "Radiance", "Laughter", "Smile", "Giggles", "Goodwill", "Warmth", "Affection", "Closeness", "Friendship", "Companionship", "Bonding", "Belonging", "Acceptance", "Recognition", "Approval", "Gratitude", "Thankfulness"]
+
 
     # Initialize a Counter to tally occurrences of happiness-related terms
     happiness_word_freq = Counter()
@@ -450,7 +452,7 @@ import re
 
 def find_struggle_terms(corpus):
     # Define a list of the top fifty most common Spanish struggle or hardship-related terms
-    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "resistance", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "guilt", "depression", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
+    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "resistance", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depression", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of struggle terms
     struggle_word_freq = Counter()
@@ -480,7 +482,7 @@ import re
 
 def find_health_terms(corpus):
     # Define a list of health-related terms
-    health_terms = ["doctor", "nurse", "hospital", "clinic", "medicine", "prescription", "insurance", "appointment", "check-up", "emergency", "pharmacy", "surgery", "ambulance", "patient", "care", "treatment", "therapy", "recovery", "vaccine", "vaccination", "flu", "cold", "fever", "cough", "sore throat", "headache", "pain", "injury", "wound", "bandage", "cast", "physical therapy", "mental health", "diet", "exercise", "weight", "blood pressure", "cholesterol", "diabetes", "asthma", "allergy", "immunity", "virus", "bacteria", "healthcare"]
+    health_terms = ["doctor", "nurse", "hospital", "clinic", "medicine", "prescription", "insurance", "appointment", "check up", "emergency", "pharmacy", "surgery", "ambulance", "patient", "care", "treatment", "therapy", "recovery", "vaccine", "vaccination", "flu", "cold", "fever", "cough", "sore throat", "headache", "pain", "injury", "wound", "bandage", "cast", "physical therapy", "mental health", "diet plan", "workout", "body weight", "blood pressure", "cholesterol", "diabetes", "asthma", "allergy", "immunity", "virus", "bacteria", "healthcare"]
 
     # Initialize a Counter to tally occurrences of health-related terms
     health_word_freq = Counter()
@@ -510,7 +512,7 @@ import re
 
 def find_history_terms(corpus):
     # Define a list of history-related terms
-    history_terms = ["ancestors", "traditions", "roots", "lineage", "legacy", "ancestral", "heritage", "culture", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "indigenous", "tribal", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "immigrants", "migrants", "explorers", "trailblazers", "historical events", "ancestral stories", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"]
+    history_terms = ["ancestors", "traditions", "lineage", "legacy", "ancestral", "heritage", "culture", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "immigrants", "migrants", "explorers", "trailblazers", "historical events", "ancestral stories", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"]
 
     # Initialize a Counter to tally occurrences of history-related terms
     history_word_freq = Counter()
@@ -570,7 +572,7 @@ import re
 
 def find_manual_labor_terms(corpus):
     # Define a list of the top fifty most common Spanish labor-related terms
-    manual_labor_terms = ["Factory", "Shift", "Union", "Worker", "Laborer", "Employee", "Employer", "Job", "Occupation", "Wage", "Salary", "Paycheck", "Hourly", "Daily", "Weekly", "Overtime", "Minimum wage", "Living wage", "Benefits", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Skills", "Experience", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Hospitality"]  # Add more as needed
+    manual_labor_terms = ["Factory", "labor union", "Union", "Worker", "Laborer", "Employee", "Employer", "Job", "Vocation", "Wage", "Salary", "Paycheck", "Hourly Wage", "Daily Wage", "Weekly Wage", "Overtime", "Minimum wage", "Living wage", "Health Insurance", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Skills", "Experience", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Service Worker"]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of labor terms
     manual_labor_word_freq = Counter()
@@ -600,7 +602,7 @@ import re
 
 def find_migration_terms(corpus):
     # Define a list of migration-related terms
-    migration_terms = ["immigration", "emigration", "refugee", "asylum", "naturalization", "resettlement", "integration", "exile", "citizenship", "border", "visa", "deportation", "fleeing", "repatriation", "flight", "transplantation", "dispersion", "exodus", "nomadism", "migrant", "transient", "displacement", "colonization", "settler", "journey", "voyage", "pilgrimage", "relocation", "repopulation", "expatriate", "sojourner", "transmigrating", "travelling", "seeking refuge", "dislocation", "displaced person", "reintegration", "acculturation", "diaspora", "melting pot", "ethnic diversity", "immigrant community", "border crossing", "migration policy", "immigration reform"]
+    migration_terms = ["immigration", "emigration", "refugee", "asylum", "naturalization", "resettlement", "integration", "exile", "citizenship", "border", "visa", "deportation", "fleeing", "repatriation", "exodus", "transplantation", "dispersion", "exodus", "nomadism", "migrant", "transient", "displacement", "colonization", "settler", "journey", "voyage", "pilgrimage", "relocation", "repopulation", "expatriate", "sojourner", "transmigrating","resettlement", "seeking refuge", "dislocation", "displaced person", "reintegration", "acculturation", "diaspora", "melting pot", "ethnic diversity", "immigrant community", "border crossing", "migration policy", "immigration reform"]
 
     # Initialize a Counter to tally occurrences of migration-related terms
     migration_word_freq = Counter()
@@ -630,7 +632,7 @@ import re
 
 def find_leisure_terms(corpus):
     # Define a list of leisure-related terms
-    leisure_terms = ["leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "play", "fun", "relaxation", "outdoor", "indoor", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "river", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "music", "concert", "movie", "film", "theater", "reading", "library", "board game", "card game", "dance", "bbq"]
+    leisure_terms = ["leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "play", "fun", "relaxation", "adventure", "pastime", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "river", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "music", "concert", "movie", "film", "theater", "reading", "library", "board game", "card game", "dance", "bbq"]
 
     # Initialize a Counter to tally occurrences of leisure-related terms
     leisure_word_freq = Counter()
@@ -660,7 +662,7 @@ import re
 
 def find_religion_terms(corpus):
     # Define a list of the top fifty most common Spanish religion-related terms
-    religion_terms = ["Church", "Temple", "Mosque", "Synagogue", "Prayer", "Worship", "Faith", "Belief", "Spirituality", "Religious", "Devotion", "Ritual", "Ceremony", "Sacred", "Holy", "Blessing", "Preacher", "Minister", "Priest", "Pastor", "Deacon", "Congregation", "Community", "Fellowship", "Charity", "Mission", "Evangelism", "Revival", "Sermon", "Bible", "Scripture", "Quran", "Torah", "Hymn", "Choir", "Religious education", "Sunday school", "Youth group", "Confirmation", "Bar mitzvah", "Bat mitzvah", "Sacrament", "Communion", "Baptism", "Confession", "Repentance", "Salvation"]  # Add more as needed
+    religion_terms = ["Church", "Temple", "Mosque", "Synagogue", "Prayer", "Worship", "Faith", "Creed", "Spirituality", "Religious", "Devotion", "Ritual", "Ceremony", "Sacred", "Holy", "Blessing", "Preacher", "Minister", "Priest", "Pastor", "Deacon", "Congregation", "Parish", "Fellowship", "Almsgiving", "Devout", "Evangelism", "Revival", "Sermon", "Bible", "Scripture", "Quran", "Torah", "Hymn", "Choir", "Religious education", "Sunday school", "Youth group", "Confirmation", "Bar mitzvah", "Bat mitzvah", "Sacrament", "Communion", "Baptism", "Confession", "Repentance", "Salvation"]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of religion terms
     religion_word_freq = Counter()
@@ -690,7 +692,7 @@ import re
 
 def find_technology_terms(corpus):
     # Define a list of technology-related terms
-    technology_terms = ["Computer", "PC", "Software", "Hardware", "Program", "Code", "Data", "Database", "Network", "Internet", "Website", "Browser", "Operating system", "Application", "Word processor", "Spreadsheet", "Database", "Modem", "Printer", "Scanner", "Fax machine", "VHS", "Cassette", "Walkman", "Tape recorder", "CD player", "Compact disc", "Video game", "Atari", "Nintendo", "Gameboy", "Sega", "Playstation", "Xbox", "Calculator", "Typewriter", "Telephone", "Answering machine", "Pager", "Television", "VCR", "Remote control", "Antenna", "Cable", "Satellite", "Video cassette", "Walkie-talkie", "Walkie", "Radio", "Cassette player", "Boombox", "Turntable", "Vinyl record", "Record player", "Camera", "Polaroid", "Film", "Flashlight", "Calculator", "Pocket calculator", "Calculator watch", "Pocket watch", "Wristwatch", "Microwave", "Toaster", "Blender", "Vacuum cleaner", "Dishwasher", "Washing machine", "Dryer", "Refrigerator", "Air conditioner", "Fan", "Heater", "Thermostat", "Alarm clock"]
+    technology_terms = ["Fan", "Electric Fan", "Oscillating Fan", "Desk Fan", "Box Fan", "Ceiling Fan", "Portable Fan", "Ventilator", "Computer", "PC", "Software", "Hardware", "Program", "Code", "Data", "Database", "Network", "Internet", "Website", "Browser", "Operating system", "Dataset", "Word processor", "Spreadsheet", "Database", "Modem", "Printer", "Scanner", "Fax machine", "VHS", "Cassette", "Walkman", "Tape recorder", "CD player", "Compact disc", "Video game", "Atari", "Nintendo", "Gameboy", "Sega", "Playstation", "Xbox", "Calculator", "Typewriter", "Telephone", "Answering machine", "Pager", "Television", "VCR", "Remote control", "Antenna", "Cable", "Satellite", "Video cassette", "Walkie-talkie", "Walkie", "Radio", "Cassette player", "Boombox", "Turntable", "Vinyl record", "Record player", "Camera", "Polaroid", "Celluloid", "Flashlight", "Calculator", "Timepiece", "Wristwatch", "Microwave", "Toaster", "Blender", "Vacuum cleaner", "Dishwasher", "Washing machine", "Dryer", "Refrigerator", "Air conditioner", "Ventilator", "Heater", "Thermostat", "Alarm clock"]
 
     # Initialize a Counter to tally occurrences of technology terms
     technology_word_freq = Counter()
@@ -1264,7 +1266,7 @@ from collections import Counter
 import re
 
 def find_marriage_and_divorce_terms(corpus):
-    marriage_and_divorce_terms = ["marriage", "wedding", "bride", "groom", "engagement", "fiance", "fiancee", "spouse", "husband", "wife", "vows", "ceremony", "reception", "anniversary", "honeymoon", "divorce", "separation", "alimony", "custody", "prenup", "ring", "proposal", "love", "commitment", "partnership", "union", "betrothal", "elopement", "matrimony", "nuptials", "celebration", "toast", "bridesmaid", "groomsman", "officiant", "invitation", "registry", "bridal", "shower", "bachelor", "bachelorette", "dowry", "veil", "tuxedo", "bouquet", "aisle", "altar", "honeymoon", "settlement"]
+    marriage_and_divorce_terms = ["marriage", "wedding", "bride", "groom", "engagement", "fiance", "fiancee", "spouse", "husband", "wife", "vows", "ceremony", "reception", "anniversary", "honeymoon", "divorce", "separation", "alimony", "custody", "prenup", "ring", "proposal", "affection", "commitment", "partnership", "vows", "betrothal", "elopement", "matrimony", "nuptials", "wedding reception", "toast", "bridesmaid", "groomsman", "officiant", "invitation", "registry", "bridal", "shower", "bachelor", "bachelorette", "dowry", "veil", "tuxedo", "bouquet", "altar", "honeymoon", "alimony"]
 
 
     # Initialize a counter for marriage and divorce-related terms
@@ -1294,7 +1296,7 @@ from collections import Counter
 import re
 
 def find_motherhood_terms(corpus):
-    motherhood_terms = ["mother", "mom", "mum", "mommy", "mummy", "maternal", "motherhood", "pregnancy", "birth", "newborn", "baby", "infant", "toddler", "parenting", "nurture", "care", "breastfeeding", "childbirth", "maternity", "postpartum", "labor", "delivery", "child", "family", "nanny", "midwife", "doula", "contractions", "prenatal", "obstetrician", "gynecologist", "nursery", "pacifier", "crib", "diaper", "stroller", "carriage", "playpen", "bottle", "formula", "lullaby", "nanny", "babysitter", "swaddle", "onesie", "highchair", "milk", "pediatrician", "growth"]
+    motherhood_terms = ["wetnurse","mother", "mom", "mum", "mommy", "mummy", "maternal", "motherhood", "pregnancy", "birth", "newborn", "baby", "newborn", "toddler", "parenting", "nurture", "nurturing", "breastfeeding", "childbirth", "maternity", "postpartum", "childbirth", "birth", "child", "parenthood", "nanny", "midwife", "doula", "contractions", "prenatal", "obstetrician", "gynecologist", "nursery", "pacifier", "crib", "diaper", "stroller", "carriage", "playpen", "bottle", "formula", "lullaby", "nanny", "babysitter", "swaddle", "onesie", "highchair", "breastmilk", "pediatrician", "mothering"]
 
     # Initialize a counter for motherhood-related terms
     motherhood_word_freq = Counter()
@@ -1320,7 +1322,7 @@ for word, count in top_motherhood_terms:
     print(f"{word.capitalize()}: {count}")
 
 def find_reproductive_rights_terms(corpus):
-    reproductive_rights_terms = ["abortion", "contraception", "birth control", "family planning", "reproductive health", "fertility", "sterilization", "IVF", "in vitro fertilization", "pregnancy", "miscarriage", "stillbirth", "menstruation", "menstrual health", "period", "ovulation", "ovarian", "uterus", "womb", "fertility treatment", "assisted reproduction", "egg donation", "sperm donation", "surrogacy", "adoption", "parental leave", "maternity leave", "paternity leave", "reproductive rights", "reproductive justice", "sexual health", "sexual education", "family planning clinic", "Planned Parenthood", "morning-after pill", "RU-486", "emergency contraception", "IUD", "implant", "tubal ligation", "vasectomy", "condom", "diaphragm", "cervical cap", "birth spacing", "reproductive freedom", "pro-choice", "pro-life", "reproductive autonomy"]
+    reproductive_rights_terms = ["abortion", "contraception", "birth control", "family planning", "reproductive health", "reproductivity", "sterilization", "IVF", "in vitro fertilization", "pregnancy", "miscarriage", "stillbirth", "menstruation", "menstrual health", "menses", "ovulation", "ovarian", "uterus", "womb", "fertility treatment", "assisted reproduction", "egg donation", "sperm donation", "surrogacy", "adoption", "parental leave", "maternity leave", "paternity leave", "reproductive rights", "reproductive justice", "sexual health", "sexual education", "family planning clinic", "Planned Parenthood", "morning-after pill", "RU-486", "emergency contraception", "IUD", "implant", "tubal ligation", "vasectomy", "condom", "diaphragm", "cervical cap", "birth spacing", "reproductive freedom", "pro-choice", "pro-life", "reproductive autonomy"]
 
     # Initialize a counter for reproductive rights-related terms
     reproductive_rights_word_freq = Counter()
