@@ -180,7 +180,7 @@ import re
 
 def find_conflict_terms(corpus):
     # Define a list of conflict-related terms
-    conflict_terms = ["conflict", "war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "injury", "wound", "trauma", "ptsd", "violence", "aggression", "hostility", "fear", "anxiety", "security", "protection", "defense", "attack", "invasion", "military occupation", "resistance", "rebellion", "revolution", "mobilization", "draft", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"]
+    conflict_terms = ["conflict", "war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "maim", "ptsd", "aggression", "hostility", "fear", "anxiety", "security", "protection", "defense", "attack", "invasion", "military occupation", "resistance", "rebellion", "revolution", "mobilization", "draft", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"]
 
     # Initialize a Counter to tally occurrences of conflict-related terms
     conflict_word_freq = Counter()
@@ -240,7 +240,7 @@ import re
 
 def find_culture_terms(corpus):
     # Define a list of culture-related terms
-    culture_terms = ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "dance", "language", "dialect", "family", "history", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "skills", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"]
+    culture_terms = ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "language", "dialect", "family", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "skills", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"]
 
     # Initialize a Counter to tally occurrences of culture-related terms
     culture_word_freq = Counter()
@@ -270,7 +270,7 @@ import re
 
 def find_economic_terms(corpus):
     # Define a list of the top fifty most common Spanish economic-related terms
-    economic_terms = ["great depression", "employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craftsman", "manual labor", "blue-collar", "white-collar", "unemployment", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"]
+    economic_terms = ["great depression", "employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craftsman", "manual labor", "blue-collar", "white-collar", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"]
 
     # Initialize a Counter to tally occurrences of economic terms
     economic_word_freq = Counter()
@@ -452,7 +452,7 @@ import re
 
 def find_struggle_terms(corpus):
     # Define a list of the top fifty most common Spanish struggle or hardship-related terms
-    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "resistance", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depressed", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
+    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depressed", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of struggle terms
     struggle_word_freq = Counter()
@@ -512,7 +512,7 @@ import re
 
 def find_history_terms(corpus):
     # Define a list of history-related terms
-    history_terms = ["ancestors", "traditions", "lineage", "legacy", "ancestral", "heritage", "culture", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "immigrants", "migrants", "explorers", "trailblazers", "historical events", "ancestral stories", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"]
+    history_terms = ["ancestors", "traditions", "lineage", "legacy", "ancestral", "heritage", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "immigrants", "migrants", "explorers", "trailblazers", "historical events", "ancestral stories", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"]
 
     # Initialize a Counter to tally occurrences of history-related terms
     history_word_freq = Counter()
@@ -777,7 +777,7 @@ from collections import Counter
 import re
 
 def find_canadian_terms(corpus):
-    canadian_terms = ["Canada", "Canadian", "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec", "Hamilton", "London", "Victoria", "Halifax", "Regina", "Saskatoon", "St. John's", "Kitchener", "Burnaby", "Windsor", "Richmond", "Burlington", "Surrey", "Mississauga", "Markham", "Brampton", "Vaughan", "Oakville", "Niagara Falls", "Waterloo", "Guelph", "Cambridge", "Kelowna", "Fredericton", "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit", "Ontario", "Quebec", "Nova Scotia", "New Brunswick", "Manitoba", "British Columbia", "Prince Edward Island", "Saskatchewan", "Alberta", "Newfoundland and Labrador"]
+    canadian_terms = ["Canada", "Canadian", "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec", "Hamilton", "Victoria", "Halifax", "Regina", "Saskatoon", "St. John's", "Kitchener", "Burnaby", "Windsor", "Richmond", "Burlington", "Surrey", "Mississauga", "Markham", "Brampton", "Vaughan", "Oakville", "Niagara Falls", "Waterloo", "Guelph", "Cambridge", "Kelowna", "Fredericton", "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit", "Ontario", "Quebec", "Nova Scotia", "New Brunswick", "Manitoba", "British Columbia", "Prince Edward Island", "Saskatchewan", "Alberta", "Newfoundland and Labrador"]
 
     canadian_word_freq = Counter()
 
