@@ -270,7 +270,7 @@ import re
 
 def find_economic_terms(corpus):
     # Define a list of the top fifty most common Spanish economic-related terms
-    economic_terms = ["employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craft", "manual labor", "blue-collar", "white-collar", "unemployment", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"]
+    economic_terms = ["great depression", "employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craftsman", "manual labor", "blue-collar", "white-collar", "unemployment", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"]
 
     # Initialize a Counter to tally occurrences of economic terms
     economic_word_freq = Counter()
@@ -452,7 +452,7 @@ import re
 
 def find_struggle_terms(corpus):
     # Define a list of the top fifty most common Spanish struggle or hardship-related terms
-    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "resistance", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depression", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
+    struggle_terms = ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "resistance", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depressed", "trauma", "loss", "grief", "anguish", "heartache", "disappointment", "frustration"]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of struggle terms
     struggle_word_freq = Counter()
@@ -632,7 +632,7 @@ import re
 
 def find_leisure_terms(corpus):
     # Define a list of leisure-related terms
-    leisure_terms = ["leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "play", "fun", "relaxation", "adventure", "pastime", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "river", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "music", "concert", "movie", "film", "theater", "reading", "library", "board game", "card game", "dance", "bbq"]
+    leisure_terms = ["ski", "leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "play", "fun", "relaxation", "adventure", "pastime", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "river", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "music", "concert", "movie", "film", "theater", "reading", "library", "board game", "card game", "dance", "bbq"]
 
     # Initialize a Counter to tally occurrences of leisure-related terms
     leisure_word_freq = Counter()
@@ -751,7 +751,7 @@ from collections import Counter
 import re
 
 def find_british_terms(corpus):
-    british_terms = ["British", "Britain", "London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Bristol", "Sheffield", "Newcastle", "Cardiff", "Nottingham", "Southampton", "Leicester", "Brighton", "Portsmouth", "Plymouth", "Derby", "York", "Hull", "Middlesbrough", "Northampton", "Luton", "Wolverhampton", "Norwich", "Swansea", "Oxford", "Cambridge", "Exeter", "Yorkshire", "Cornwall", "Essex", "Kent", "Surrey", "Devon", "England"]
+    british_terms = ["British", "Britain", "London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Bristol", "Sheffield", "Newcastle", "Cardiff", "Nottingham", "Southampton", "Leicester", "Brighton", "Portsmouth", "Plymouth", "Derby", "Hull", "Middlesbrough", "Northampton", "Luton", "Wolverhampton", "Norwich", "Swansea", "Oxford", "Cambridge", "Exeter", "Yorkshire", "Cornwall", "Essex", "Kent", "Surrey", "Devon", "England"]
     
     british_word_freq = Counter()
 
@@ -981,7 +981,7 @@ from collections import Counter
 import re
 
 def find_irish_terms(corpus):
-    irish_terms = ["Irish", "Ireland", "Dublin", "Cork", "Galway", "Limerick", "Waterford", "Drogheda", "Dundalk", "Bray", "Navan", "Kilkenny", "Ennis", "Carlow", "Tralee", "Newbridge", "Portlaoise", "Balbriggan", "Naas", "Athlone", "Mullingar", "Celbridge", "Wexford", "Letterkenny", "Sligo", "Clonmel", "Greystones", "Malahide", "Carrigaline", "Leixlip", "Lucan", "Skerries", "Tramore", "Killarney", "Arklow", "Kilcock", "Ballina", "Castlebar", "Maynooth", "Thurles", "Monaghan", "Mallow", "Portarlington", "Buncrana", "Gorey", "Tuam", "Cobh", "potato famine"]
+    irish_terms = ["Irish", "Ireland", "Dublin", "Galway", "Limerick", "Waterford", "Drogheda", "Dundalk", "Bray", "Navan", "Kilkenny", "Ennis", "Carlow", "Tralee", "Newbridge", "Portlaoise", "Balbriggan", "Naas", "Athlone", "Mullingar", "Celbridge", "Wexford", "Letterkenny", "Sligo", "Clonmel", "Greystones", "Malahide", "Carrigaline", "Leixlip", "Lucan", "Skerries", "Tramore", "Killarney", "Arklow", "Kilcock", "Ballina", "Castlebar", "Maynooth", "Thurles", "Monaghan", "Mallow", "Portarlington", "Buncrana", "Gorey", "Tuam", "Cobh", "potato famine"]
     
     irish_word_freq = Counter()
 
@@ -1080,7 +1080,7 @@ from collections import Counter
 import re
 
 def find_norwegian_terms(corpus):
-    norwegian_terms = ["Norwegian", "Norway", "Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Tromsø", "Drammen", "Fredrikstad", "Skien", "Sandnes", "Sarpsborg", "Bodø", "Ålesund", "Haugesund", "Moss", "Porsgrunn", "Arendal", "Tønsberg", "Hamar", "Ytre Enebakk", "Halden", "Larvik", "Askøy", "Kongsberg", "Harstad", "Molde", "Steinkjer", "Lillehammer", "Gjøvik", "Kristiansund", "Narvik", "Horten", "Leirvik", "Mandal", "Voss", "Ski", "Mo i Rana", "Namsos", "Lillestrøm", "Sandefjord", "Hønefoss", "Egersund", "Kongsvinger", "Raufoss", "Rjukan"]
+    norwegian_terms = ["Norwegian", "Norway", "Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Tromsø", "Drammen", "Fredrikstad", "Skien", "Sandnes", "Sarpsborg", "Bodø", "Ålesund", "Haugesund", "Moss", "Porsgrunn", "Arendal", "Tønsberg", "Hamar", "Ytre Enebakk", "Halden", "Larvik", "Askøy", "Kongsberg", "Harstad", "Molde", "Steinkjer", "Lillehammer", "Gjøvik", "Kristiansund", "Narvik", "Horten", "Leirvik", "Mandal", "Voss", "Mo i Rana", "Namsos", "Lillestrøm", "Sandefjord", "Hønefoss", "Egersund", "Kongsvinger", "Raufoss", "Rjukan"]
 
     norwegian_word_freq = Counter()
 
