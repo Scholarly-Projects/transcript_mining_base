@@ -29,7 +29,7 @@ stop_words = stop_words_spanish.union(stop_words_english)
 import os
 
 # Directory containing CSV files
-directory = 'C:\\Users\\aweymouth\\Documents\\Github\\transcript_mining_RWHP\\CSV'
+directory = 'C:\\Users\\aweymouth\\Documents\\Github\\transcript_mining_base\\CSV'
 
 # List of CSV file names
 file_names = [
