@@ -111,7 +111,7 @@ def find_agriculture_terms(corpus):
 top_agriculture_terms = find_agriculture_terms(corpus)
 
 # Print the top 50 agriculture-related terms
-print("*agriculture")
+print("## agriculture")
 for word, count in top_agriculture_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -141,7 +141,7 @@ def find_animal_terms(corpus):
 top_animal_terms = find_animal_terms(corpus)
 
 # Print the top 150 animal terms
-print("*animals")
+print("## animals")
 for word, count in top_animal_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -171,7 +171,7 @@ def find_fashion_terms(corpus):
 top_fashion_terms = find_fashion_terms(corpus)
 
 # Print the top 50 fashion-related terms
-print("*clothing")
+print("## clothing")
 for word, count in top_fashion_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -201,7 +201,7 @@ def find_conflict_terms(corpus):
 top_conflict_terms = find_conflict_terms(corpus)
 
 # Print the top 50 conflict-related terms
-print("*conflict")
+print("## conflict")
 for word, count in top_conflict_terms:
     print(f"{word.capitalize()}: {count}")
   
@@ -231,7 +231,7 @@ def find_crime_terms(corpus):
 top_crime_terms = find_crime_terms(corpus)
 
 # Print the top 150 crime terms
-print("*crime")
+print("## crime")
 for word, count in top_crime_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -261,7 +261,7 @@ def find_culture_terms(corpus):
 top_culture_terms = find_culture_terms(corpus)
 
 # Print the top 50 culture-related terms
-print("*culture")
+print("## culture")
 for word, count in top_culture_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -291,7 +291,7 @@ def find_economic_terms(corpus):
 top_economic_terms = find_economic_terms(corpus)
 
 # Print the top 150 economic terms
-print("*economy")
+print("## economy")
 for word, count in top_economic_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -321,7 +321,7 @@ def find_education_terms(corpus):
 top_education_terms = find_education_terms(corpus)
 
 # Print the top 150 education terms
-print("*education")
+print("## education")
 for word, count in top_education_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -351,7 +351,7 @@ def find_environment_terms(corpus):
 top_environment_terms = find_environment_terms(corpus)
 
 # Print the top 150 environment terms
-print("*environment")
+print("## environment")
 for word, count in top_environment_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -381,7 +381,7 @@ def find_family_terms(corpus):
 top_family_terms = find_family_terms(corpus)
 
 # Print the top 150 family terms
-print("*family")
+print("## family")
 for word, count in top_family_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -412,7 +412,7 @@ def find_food_and_drink_terms(corpus):
 top_food_and_drink_terms = find_food_and_drink_terms(corpus)
 
 # Print the top 150 food and drink terms
-print("*food and drink")
+print("## food and drink")
 for word, count in top_food_and_drink_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -443,7 +443,7 @@ def find_happiness_terms(corpus):
 top_happiness_terms = find_happiness_terms(corpus)
 
 # Print the top happiness-related terms
-print("*happiness")
+print("## happiness")
 for word, count in top_happiness_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -473,7 +473,7 @@ def find_struggle_terms(corpus):
 top_struggle_terms = find_struggle_terms(corpus)
 
 # Print the top 150 struggle terms
-print("*hardship")
+print("## hardship")
 for word, count in top_struggle_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -503,7 +503,7 @@ def find_health_terms(corpus):
 top_health_terms = find_health_terms(corpus)
 
 # Print the top 50 health-related terms
-print("*health")
+print("## health")
 for word, count in top_health_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -533,7 +533,7 @@ def find_history_terms(corpus):
 top_history_terms = find_history_terms(corpus)
 
 # Print the top 50 history-related terms
-print("*history")
+print("## history")
 for word, count in top_history_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -563,7 +563,7 @@ def find_indigenous_terms(corpus):
 top_indigenous_terms = find_indigenous_terms(corpus)
 
 # Print the top 50 indigenous-related terms
-print("*indigenous")
+print("## indigenous")
 for word, count in top_indigenous_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -593,7 +593,7 @@ def find_manual_labor_terms(corpus):
 top_manual_labor_terms = find_manual_labor_terms(corpus)
 
 # Print the top 150 labor terms
-print("*labor")
+print("## labor")
 for word, count in top_manual_labor_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -623,7 +623,7 @@ def find_migration_terms(corpus):
 top_migration_terms = find_migration_terms(corpus)
 
 # Print the top 50 migration-related terms
-print("*migration")
+print("## migration")
 for word, count in top_migration_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -653,7 +653,7 @@ def find_leisure_terms(corpus):
 top_leisure_terms = find_leisure_terms(corpus)
 
 # Print the top 50 leisure-related terms
-print("*recreation")
+print("## recreation")
 for word, count in top_leisure_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -683,7 +683,7 @@ def find_religion_terms(corpus):
 top_religion_terms = find_religion_terms(corpus)
 
 # Print the top 150 religion terms
-print("*religion")
+print("## religion")
 for word, count in top_religion_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -713,7 +713,7 @@ def find_technology_terms(corpus):
 top_technology_terms = find_technology_terms(corpus)
 
 # Print the top 150 technology terms
-print("*technology")
+print("## technology")
 for word, count in top_technology_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -743,7 +743,7 @@ def find_basque_terms(corpus):
 top_basque_terms = find_basque_terms(corpus)
 
 # Print the top 5 Basque-related terms
-print("*basque")
+print("## basque")
 for word, count in top_basque_terms:
     print(f"{word.lower()}: {count}")
 
@@ -769,7 +769,7 @@ def find_british_terms(corpus):
 
 top_british_terms = find_british_terms(corpus)
 
-print("*britain")
+print("## britain")
 for word, count in top_british_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -795,7 +795,7 @@ def find_canadian_terms(corpus):
 
 top_canadian_terms = find_canadian_terms(corpus)
 
-print("*canada")
+print("## canada")
 for word, count in top_canadian_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -820,7 +820,7 @@ def find_chinese_terms(corpus):
 top_chinese_terms = find_chinese_terms(corpus)
 
 # Print the top 5 Chinese-related terms
-print("*china")
+print("## china")
 for word, count in top_chinese_terms:
     print(f"{word.lower()}: {count}")
 
@@ -847,7 +847,7 @@ def find_finnish_terms(corpus):
 
 top_finnish_terms = find_finnish_terms(corpus)
 
-print("*finland")
+print("## finland")
 for word, count in top_finnish_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -871,7 +871,7 @@ def find_french_terms(corpus):
 
 top_french_terms = find_french_terms(corpus)
 
-print("*france")
+print("## france")
 for word, count in top_french_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -895,7 +895,7 @@ def find_german_terms(corpus):
 
 top_german_terms = find_german_terms(corpus)
 
-print("*germany")
+print("## germany")
 for word, count in top_german_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -918,7 +918,7 @@ def find_greek_terms(corpus):
 
 top_greek_terms = find_greek_terms(corpus)
 
-print("*greece")
+print("## greece")
 for word, count in top_greek_terms:
     print(f"{word.lower()}: {count}")
 
@@ -948,7 +948,7 @@ def find_geographic_words(corpus):
 top_geographic_words = find_geographic_words(corpus)
 
 # Print the top 150 geographic place names in Idaho
-print("*idaho")
+print("## idaho")
 for word, count in top_geographic_words:
     print(f"{word.capitalize()}: {count}")
 
@@ -973,7 +973,7 @@ def find_indian_terms(corpus):
 top_indian_terms = find_indian_terms(corpus)
 
 # Print the top 5 Indian-related terms
-print("*india")
+print("## india")
 for word, count in top_indian_terms:
     print(f"{word.lower()}: {count}")
 
@@ -999,7 +999,7 @@ def find_irish_terms(corpus):
 
 top_irish_terms = find_irish_terms(corpus)
 
-print("*ireland")
+print("## ireland")
 for word, count in top_irish_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1022,7 +1022,7 @@ def find_italian_terms(corpus):
 
 top_italian_terms = find_italian_terms(corpus)
 
-print("*italy")
+print("## italy")
 for word, count in top_italian_terms:
     print(f"{word.lower()}: {count}")
 
@@ -1047,7 +1047,7 @@ def find_japanese_terms(corpus):
 top_japanese_terms = find_japanese_terms(corpus)
 
 # Print the top 5 Japanese-related terms
-print("*japan")
+print("## japan")
 for word, count in top_japanese_terms:
     print(f"{word.lower()}: {count}")
 
@@ -1072,7 +1072,7 @@ def find_mexican_terms(corpus):
 top_mexican_terms = find_mexican_terms(corpus)
 
 # Print the top 5 Mexican-related terms
-print("*mexico")
+print("## mexico")
 for word, count in top_mexican_terms:
     print(f"{word.lower()}: {count}")
 
@@ -1098,7 +1098,7 @@ def find_norwegian_terms(corpus):
 
 top_norwegian_terms = find_norwegian_terms(corpus)
 
-print("*norway")
+print("## norway")
 for word, count in top_norwegian_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1123,7 +1123,7 @@ def find_philippine_terms(corpus):
 top_philippine_terms = find_philippine_terms(corpus)
 
 # Print the top 5 Philippine-related terms
-print("*philippines")
+print("## philippines")
 for word, count in top_philippine_terms:
     print(f"{word.lower()}: {count}")
 
@@ -1146,7 +1146,7 @@ def find_polish_terms(corpus):
 
 top_polish_terms = find_polish_terms(corpus)
 
-print("*poland")
+print("## poland")
 for word, count in top_polish_terms:
     print(f"{word.lower()}: {count}")
 
@@ -1179,7 +1179,7 @@ def find_portuguese_terms(corpus):
 
 top_portuguese_terms = find_portuguese_terms(corpus)
 
-print("*portugal")
+print("## portugal")
 for word, count in top_portuguese_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1205,7 +1205,7 @@ def find_scottish_terms(corpus):
 
 top_scottish_terms = find_scottish_terms(corpus)
 
-print("*scotland")
+print("## scotland")
 for word, count in top_scottish_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1230,7 +1230,7 @@ def find_spanish_terms(corpus):
 
 top_spanish_terms = find_spanish_terms(corpus)
 
-print("*spain")
+print("## spain")
 for word, count in top_spanish_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1256,7 +1256,7 @@ def find_swedish_terms(corpus):
 
 top_swedish_terms = find_swedish_terms(corpus)
 
-print("*swedish")
+print("## swedish")
 for word, count in top_swedish_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1288,7 +1288,7 @@ def find_marriage_and_divorce_terms(corpus):
 top_marriage_and_divorce_terms = find_marriage_and_divorce_terms(corpus)
 
 # Print the top 50 marriage and divorce-related terms
-print("*marriage_and_divorce")
+print("## marriage_and_divorce")
 for word, count in top_marriage_and_divorce_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1317,7 +1317,7 @@ def find_motherhood_terms(corpus):
 top_motherhood_terms = find_motherhood_terms(corpus)
 
 # Print the top 50 motherhood-related terms
-print("*motherhood")
+print("## motherhood")
 for word, count in top_motherhood_terms:
     print(f"{word.capitalize()}: {count}")
 
@@ -1343,6 +1343,6 @@ def find_reproductive_rights_terms(corpus):
 top_reproductive_rights_terms = find_reproductive_rights_terms(corpus)
 
 # Print the top 50 reproductive rights-related terms
-print("*reproductive rights")
+print("## reproductive rights")
 for word, count in top_reproductive_rights_terms:
     print(f"{word.capitalize()}: {count}")
