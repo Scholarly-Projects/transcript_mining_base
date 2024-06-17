@@ -1,1 +1,1 @@
-# transcript_mining_RWHP
+This is a work in progress text mining tool developed by Andrew Weymouth for the University of Idaho to increase efficiency and accuracy of the Digital Scholarship and Open Strategies department Oral History as Data tool. This template can be iterated on by dropping new sets of transcriptions into the CSV folder and running Python within the hello.py file. Future iterations of this template will modularize the text mining categories into General, Geographic and Custom categories. 
