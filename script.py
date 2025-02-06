@@ -96,7 +96,7 @@ import re
 
 def find_agriculture_terms(corpus):
     # Define a list of agriculture-related terms
-    agriculture_terms = [term.lower() for term in ["harvest", "tractor", "acreage", "crop", "livestock", "farm field", "barn building", "ranch", "garden", "orchard", "dairy", "cattle", "poultry", "equipment", "fertilizer", "seed", "irrigation", "plow", "farmhand", "hoe", "shovel", "milking", "hay", "silage", "compost", "weeding", "crop rotation", "organic", "gmo", "sustainable", "farming", "rural", "homestead", "grain crop", "wheat", "corn maize", "soybean", "potato", "apple fruit", "berry", "honey", "apiary", "pasture", "combine harvester", "trailer", "baler", "thresher"
+    agriculture_terms = [term.lower() for term in ["harvest", "tractor", "acreage", "crop", "livestock", "farm field", "barn building", "ranch", "garden", "orchard", "dairy", "cattle", "poultry", "farming equipment", "fertilizer", "seed", "irrigation", "plow", "farmhand", "hoe", "shovel", "milking", "hay", "silage", "compost", "weeding", "crop rotation", "organic", "gmo", "sustainable", "farming", "rural", "homestead", "grain crop", "wheat", "corn maize", "soybean", "potato", "apple fruit", "berry", "honey", "apiary", "pasture", "combine harvester", "trailer", "baler", "thresher"
     ]]
 
     # Initialize a Counter to tally occurrences of agriculture-related terms
@@ -126,7 +126,7 @@ import re
 
 def find_animal_terms(corpus):
     # Define a list of the top fifty most common Spanish animal-related terms
-    animal_terms = [term.lower() for term in ["cow", "sheep", "horse", "salmon", "goat", "pig", "chicken", "turkey", "duck", "quail", "rabbit", "squirrel", "moose", "elk", "deer", "bear", "coyote", "wolf", "fox", "mountain lion", "raccoon", "skunk", "badger", "wolves", "possum", "weasel", "ferret", "mink", "otter", "beaver", "muskrat", "marmot", "gopher", "prairie dog", "chipmunk", "bison", "buffalo", "lizard", "snake", "frog", "toad", "newt", "salamander", "owl", "hawk", "eagle", "raven", "crow", "sparrow", "finch", "bluebird", "cougar"
+    animal_terms = [term.lower() for term in ["moose", "Ewe", "horse", "salmon hatchery", "goat", "pig", "chicken", "turkey", "duck", "quail", "rabbit", "squirrel", "herd", "stag", "buck", "doe", "paw", "bear den", "cougars", "coyote", "wolves", "fox", "mountain lions", "raccoon", "skunk", "badger", "possum", "weasel", "ferret", "mink", "otter", "beaver", "muskrat", "marmot", "gopher", "prairie dog", "chipmunk", "bison", "buffalo", "lizard", "snake bite", "frog", "toad", "newt", "salamander", "owl", "hawk", "eagle", "raven", "crow", "sparrow", "finch", "bluebird", "squirrel", "lamb", "wolf pack", "whale pod", "Gaggle", "hawks", "steelhead", 
     ]]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of animal terms
@@ -147,7 +147,7 @@ def find_animal_terms(corpus):
 top_animal_terms = find_animal_terms(corpus)
 
 # Print the top 150 animal terms
-print("## animals")
+print("## wildlife")
 for word, count in top_animal_terms:
     print(f"{word}: {count}")
 
@@ -156,7 +156,7 @@ import re
 
 def find_fashion_terms(corpus):
     # Define a list of fashion-related terms
-    fashion_terms = [term.lower() for term in ["clothing", "fashion", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "dress", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "affordable", "sale", "discount", "clearance", "shopping", "retail", "department store"
+    fashion_terms = [term.lower() for term in ["clothing", "fashion", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "shopping", "retail", "department store"
     ]]
 
     # Initialize a Counter to tally occurrences of fashion-related terms
@@ -186,7 +186,7 @@ import re
 
 def find_conflict_terms(corpus):
     # Define a list of conflict-related terms
-    conflict_terms = [term.lower() for term in ["conflict", "war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "maim", "ptsd", "aggression", "hostility", "fear", "anxiety", "security", "protection", "defense", "attack", "invasion", "military occupation", "resistance", "rebellion", "revolution", "mobilization", "draft", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"
+    conflict_terms = [term.lower() for term in ["war", "battle", "combat", "soldier", "military", "deployment", "combatant", "veteran", "casualty", "maim", "ptsd", "invasion", "military occupation", "resistance", "rebellion", "revolution", "mobilization", "genocide", "ethnic cleansing", "conscription", "alliance", "enemy", "foe", "ally", "peacekeeping", "ceasefire", "treaty", "negotiation", "diplomacy", "sanctions", "arms", "weapons", "missile", "bomb", "gunfire"
     ]]
 
     # Initialize a Counter to tally occurrences of conflict-related terms
@@ -216,7 +216,7 @@ import re
 
 def find_crime_terms(corpus):
     # Define a list of the top fifty most common Spanish crime-related terms
-    crime_terms = [term.lower() for term in ["crime", "violence", "theft", "robbery", "burglary", "assault", "homicide", "murder", "rape", "domestic violence", "gangs", "drugs", "trafficking", "possession", "distribution", "addiction", "prostitution", "gambling", "corruption", "bribery", "fraud", "embezzlement", "extortion", "racketeering", "money laundering", "forgery", "identity theft", "cybercrime", "vandalism", "arson", "illegal immigration", "detention", "arrest", "interrogation", "trial", "plea bargain", "conviction", "sentencing", "imprisonment", "probation", "parole", "rehabilitation", "recidivism", "police", "detective", "officer", "investigation", "evidence", "forensics"
+    crime_terms = [term.lower() for term in ["crime", "violence", "theft", "robbery", "burglary", "assault", "homicide", "murder", "rape", "domestic violence", "gangs", "drugs", "trafficking", "possession", "distribution", "addiction", "prostitution", "gambling", "corruption", "bribery", "fraud", "embezzlement", "extortion", "racketeering", "money laundering", "forgery", "identity theft", "cybercrime", "vandalism", "arson", "illegal immigration", "detention", "arrest", "interrogation", "trial", "plea bargain", "conviction", "sentencing", "imprisonment", "probation", "parole", "rehabilitation", "recidivism", "police", "detective", "officer", "investigation", "forensics"
     ]]
 
     # Initialize a Counter to tally occurrences of crime terms
@@ -245,7 +245,7 @@ import re
 
 def find_culture_terms(corpus):
     # Define a list of culture-related terms
-    culture_terms = [term.lower() for term in ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "language", "dialect", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"
+    culture_terms = [term.lower() for term in ["tradition", "folklore", "customs", "rituals", "celebration", "cuisine", "festivals", "dialect", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "folktales", "legends", "crafts", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"
     ]]
 
     # Initialize a Counter to tally occurrences of culture-related terms
@@ -274,7 +274,7 @@ import re
 
 def find_economic_terms(corpus):
     # Define a list of the top fifty most common Spanish economic-related terms
-    economic_terms = [term.lower() for term in ["great depression", "employment", "job", "work", "labor", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "career", "profession", "skilled trade", "skill", "craftsman", "manual labor", "blue-collar", "white-collar", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "job interview", "resume document", "cover letter", "application", "hiring", "training", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"
+    economic_terms = [term.lower() for term in ["great depression", "employment", "wage", "salary", "income", "paycheck", "earnings", "livelihood", "vocation", "profession", "skilled trade", "skill", "craftsman", "manual labor", "blue-collar", "white-collar", "layoff", "dismissal", "termination", "retrenchment", "redundancy", "job search", "job interview", "resume document", "cover letter", "application", "hiring", "apprenticeship", "promotion", "advancement", "salary increase", "employee benefits", "pension", "retirement", "savings", "investment", "budgeting", "financial planning", "debt", "credit loan", "loan", "mortgage"
     ]]
 
     # Initialize a Counter to tally occurrences of economic terms
@@ -361,7 +361,7 @@ import re
 
 def find_family_terms(corpus):
     # Define a list of the top fifty most common Spanish family-related terms
-    family_terms = [term.lower() for term in ["Family", "Parent", "Mother", "Father", "Child", "Sibling", "Brother", "Sister", "Grandparent", "Grandfather", "Grandmother", "Grandchild", "Cousin", "Aunt", "Uncle", "Nephew", "Niece", "Step-parent", "Step-sibling", "Step-brother", "Step-sister", "Stepchild", "Spouse", "Husband", "Wife", "Partner", "Boyfriend", "Girlfriend", "Fiance", "Fiancee", "Domestic partner", "Marriage", "Wedding", "Divorce", "Single parent", "Orphan", "Adoptive parent", "Adopted child", "Foster parent", "Foster child", "Guardian", "Legal guardian", "Custody", "Child support", "Family gathering", "Family dinner", "Family tradition"
+    family_terms = [term.lower() for term in ["Parent", "Mother", "Father", "Child", "Sibling", "Brother", "Sister", "Grandparent", "Grandfather", "Grandmother", "Grandchild", "Cousin", "Aunt", "Uncle", "Nephew", "Niece", "Step-parent", "Step-sibling", "Step-brother", "Step-sister", "Stepchild", "Spouse", "Husband", "Wife", "Partner", "Boyfriend", "Girlfriend", "Fiance", "Fiancee", "Domestic partner", "Marriage", "Wedding", "Divorce", "Single parent", "Orphan", "Adoptive parent", "Adopted child", "Foster parent", "Foster child", "Guardian", "Legal guardian", "Custody", "Child support", "Family gathering", "Family dinner", "Family tradition"
     ]]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of family terms
@@ -390,7 +390,7 @@ import re
 
 def find_food_and_drink_terms(corpus):
     # Define a list of the top fifty most common Spanish food and drink terms
-    food_and_drink_terms = [term.lower() for term in ["Potato", "Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Marmalade", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Fruit spread", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Almonds", "Raisins"
+    food_and_drink_terms = [term.lower() for term in ["Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Marmalade", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Fruit spread", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Almonds", "Raisins"
     ]]
 
     # Initialize a Counter to tally occurrences of food and drink terms
@@ -412,64 +412,6 @@ top_food_and_drink_terms = find_food_and_drink_terms(corpus)
 # Print the top 150 food and drink terms
 print("## food and drink")
 for word, count in top_food_and_drink_terms:
-    print(f"{word}: {count}")
-
-from collections import Counter
-import re
-
-def find_happiness_terms(corpus):
-    # Define a list of happiness-related terms
-    happiness_terms = [term.lower() for term in ["Joy", "Contentment", "Bliss", "Elation", "Cheer", "Pleasure", "Happiness", "Well-being", "Serenity", "Hopefulness", "Enjoyment", "Comfort", "Cozy", "Euphoria", "Glee", "Amusement", "Radiance", "Laughter", "Smile", "Giggles", "Goodwill", "Warmth", "Affection", "Closeness", "Friendship", "Companionship", "Bonding", "Belonging", "Acceptance", "Approval", "Gratitude", "Thankfulness"
-    ]]
-
-    # Initialize a Counter to tally occurrences of happiness-related terms
-    happiness_word_freq = Counter()
-
-    # Tokenize the corpus to handle multi-word expressions
-    tokens = re.findall(r'\b\w+\b', corpus.lower())
-
-    # Iterate over each token in the corpus
-    for word in tokens:
-        if word in happiness_terms:
-            happiness_word_freq[word] += 1
-
-    return happiness_word_freq.most_common(20)
-
-# Call the function to find happiness-related terms in the corpus
-top_happiness_terms = find_happiness_terms(corpus)
-
-# Print the top happiness-related terms
-print("## happiness")
-for word, count in top_happiness_terms:
-    print(f"{word}: {count}")
-
-from collections import Counter
-import re
-
-def find_struggle_terms(corpus):
-    # Define a list of the top fifty most common Spanish struggle or hardship-related terms
-    struggle_terms = [term.lower() for term in ["poverty", "unemployment", "stress", "exhaustion", "overwork", "inequality", "disenfranchisement", "exploitation", "insecurity", "uncertainty", "eviction", "foreclosure", "strife", "discontent", "privation", "oppression", "discrimination", "disillusionment", "desperation", "hopelessness", "challenge", "adversity", "sacrifice", "strain", "alienation", "isolation", "loneliness", "estrangement", "disadvantage", "injustice", "abuse", "neglect", "abandonment", "victimization", "precariousness", "instability", "shame", "remorse", "depressed", "trauma", "grief", "anguish", "heartache", "disappointment", "frustration"
-    ]]
-
-    # Initialize a Counter to tally occurrences of struggle terms
-    struggle_word_freq = Counter()
-
-    # Tokenize the corpus to handle multi-word expressions
-    tokens = re.findall(r'\b\w+\b', corpus.lower())
-
-    # Iterate over each token in the corpus
-    for word in tokens:
-        if word in struggle_terms:
-            struggle_word_freq[word] += 1
-
-    return struggle_word_freq.most_common(20)
-
-# Call the function to find struggle terms in the corpus
-top_struggle_terms = find_struggle_terms(corpus)
-
-# Print the top 150 struggle terms
-print("## hardship")
-for word, count in top_struggle_terms:
     print(f"{word}: {count}")
 
 from collections import Counter
@@ -506,7 +448,7 @@ import re
 
 def find_history_terms(corpus):
     # Define a list of history-related terms
-    history_terms = [term.lower() for term in ["ancestors", "traditions", "lineage", "legacy", "ancestral", "heritage", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "explorers", "trailblazers", "historical events", "ancestral stories", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"
+    history_terms = [term.lower() for term in ["ancestors", "traditions", "lineage", "legacy", "ancestral", "heritage", "oral history", "ancestral home", "ancestral land", "pioneers", "settlers", "frontiersmen", "colonial", "revolutionary", "founding fathers", "historic sites", "historical landmarks", "ancestral knowledge", "historic preservation", "historical records", "local history", "family history", "explorers", "trailblazers", "historical events", "heritage sites", "cultural heritage", "community history", "historical artifacts", "historical society", "genealogy", "civil rights", "labor history", "historical documents", "archaeology", "historic buildings", "traditional crafts", "ancestral language"
     ]]
 
     # Initialize a Counter to tally occurrences of history-related terms
@@ -529,13 +471,166 @@ top_history_terms = find_history_terms(corpus)
 print("## history")
 for word, count in top_history_terms:
     print(f"{word}: {count}")
+    
+from collections import Counter
+import re
+
+def find_cinema_terms(corpus):
+    # Define a list of the top fifty most common cinema-related terms
+    cinema_terms = [term.lower() for term in [
+        "Cinema", "Film", "Movie", "Screenplay", "Script", "Producer", 
+        "Cinematography", "Editing", "Soundtrack", "Score", "Dialogue", "Actor", 
+        "Actress", "Cast", "Crew", "Scene", "Shot", "Frame", "Close-up", "Long shot", 
+        "Mid shot", "Wide shot", "Tracking shot", "Montage", "Climax", "Plot", 
+        "Storyline", "Narrative", "Character", "Antagonist", "Protagonist", 
+        "Screenwriter", "Camerawork", "Film noir", "Blockbuster", "Independent film", 
+        "Silent film", "Documentary", "Mockumentary", "Animation", "Feature film", 
+        "Short film", "Opening credits", "Closing credits", "Cameo", "Stunt", 
+        "Special effects", "Visual effects", "Voice-over"
+    ]]
+
+    # Initialize a Counter to tally occurrences of cinema terms
+    cinema_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in cinema_terms:
+            cinema_word_freq[word] += 1
+
+    return cinema_word_freq.most_common(20)
+
+# Call the function to find cinema terms in the corpus
+top_cinema_terms = find_cinema_terms(corpus)
+
+# Print the top 150 cinema terms
+print("## cinema")
+for word, count in top_cinema_terms:
+    print(f"{word}: {count}")
+    
+from collections import Counter
+import re
+
+def find_literature_terms(corpus):
+    # Define a list of the top fifty most common literature-related terms
+    literature_terms = [term.lower() for term in [
+        "Literature", "Novel", "Poetry", "Prose", "Fiction", "Nonfiction", "Narrative", 
+        "Plot", "Theme", "Character", "Dialogue", "Metaphor", "Simile", 
+        "Alliteration", "Allegory", "Symbolism", "Irony", "Foreshadowing", 
+        "Flashback", "Epilogue", "Prologue", "Manuscript", "Draft", "Editing", 
+        "Publishing", "Author", "Writer", "Playwright", "Essayist", "Verse", 
+        "Sonnet", "Haiku", "Epic poem", "Free verse", "Short story", "Novella", 
+        "Fable", "Mythology", "Folktale", "Biography", "Autobiography", 
+        "Memoir", "Criticism", "Literary theory", "Genre fiction", "Classic literature", 
+    ]]
+
+    # Initialize a Counter to tally occurrences of literature terms
+    literature_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in literature_terms:
+            literature_word_freq[word] += 1
+
+    return literature_word_freq.most_common(20)
+
+# Call the function to find literature terms in the corpus
+top_literature_terms = find_literature_terms(corpus)
+
+# Print the top 150 literature terms
+print("## literature")
+for word, count in top_literature_terms:
+    print(f"{word}: {count}")
+
+from collections import Counter
+import re
+
+def find_theater_terms(corpus):
+    # Define a list of the top fifty most common theater-related terms
+    theater_terms = [term.lower() for term in [
+        "Theater", "Drama", "Comedy", "Melodrama", "Monologue", 
+        "Stage", "Backstage", "Front stage", "Playwright", "Script", 
+        "Blocking", "Dramaturgy", "Actor", 
+        "Actress", "Cast", "Ensemble", "Understudy", "Set design", "Prop", 
+        "Costume", "Lighting design", "Sound design", "Curtain call", "Matinee", 
+        "Broadway", "Off-Broadway", "Box office", "Standing ovation", "Fourth wall", 
+        "Break character", "Dress rehearsal", "Cold reading", "Soliloquy", 
+        "Prologue", "Epilogue", "Improvisation", "Method acting", "Stage directions", 
+        "Tech rehearsal", "House lights", "Exit stage", "Upstage"
+    ]]
+
+    # Initialize a Counter to tally occurrences of theater terms
+    theater_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in theater_terms:
+            theater_word_freq[word] += 1
+
+    return theater_word_freq.most_common(20)
+
+# Call the function to find theater terms in the corpus
+top_theater_terms = find_theater_terms(corpus)
+
+# Print the top 150 theater terms
+print("## theater")
+for word, count in top_theater_terms:
+    print(f"{word}: {count}")
+
+from collections import Counter
+import re
+
+def find_music_terms(corpus):
+    # Define a list of the top fifty most common music-related terms
+    music_terms = [term.lower() for term in [
+        "Music", "Melody", "Harmony", "Rhythm", "Tempo", "Dynamics", "Notation", 
+        "Composition", "Improvisation", "Orchestration", "Counterpoint", "Cadence", 
+        "Crescendo", "Decrescendo", "Timbre", "Chord", "Key signature", 
+        "Time signature", "Interval", "Arpeggio", "Sight reading", "Ear training", 
+        "Music theory", "Conducting", "Score study", "Vibrato", 
+        "Resonance", "Acoustics", "Concert", "Recital", "Rehearsal", 
+        "Ensemble", "Soloist", "Choir", "Orchestra", "Chamber music", "Woodwind", 
+        "Brass instrument", "String instrument", "Percussion", "Piano technique", 
+        "Guitar technique", "Vocal training", "Breath control", "Stage presence", 
+        "Musical phrasing"
+    ]]
+
+    # Initialize a Counter to tally occurrences of music terms
+    music_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in music_terms:
+            music_word_freq[word] += 1
+
+    return music_word_freq.most_common(20)
+
+# Call the function to find music terms in the corpus
+top_music_terms = find_music_terms(corpus)
+
+# Print the top 150 music terms
+print("## music")
+for word, count in top_music_terms:
+    print(f"{word}: {count}")
+
 
 from collections import Counter
 import re
 
 def find_indigenous_terms(corpus):
     # Define a list of indigenous-related terms specific to tribes of Idaho
-    indigenous_terms = [term.lower() for term in ["Shoshone", "reservation", "native american", "indigenous","Bannock", "Nez Perce", "Coeur d'Alene indian", "Kootenai", "Salish", "Spokane indian", "Shoshone-Bannock", "Fort Hall indian", "Lemhi", "Shoshone-Paiute", "Shoshoni", "Tukudeka", "Sheepeater", "Camas Prairie", "Nimíipuu", "Sahaptin", "Atsina", "Kalispel indian", "Pend d'Oreille", "Yakama indian", "Flathead", "Wenatchi", "Methow", "Entiat indian", "Chelan indian", "Sinkiuse-Columbia", "Wenatchee indian", "Palus", "Cayuse indian", "Umatilla indian", "Tenino indian", "Walla Walla indian", "Nez Percé", "Yakama indian", "Colville indian", "Coeur d'Alene indian", "Spokane indian", "Columbia indian", "Willamette Valley indian", "Clearwater indian", "Salmon River indian", "Payette indian", "Bruneau indian", "Owyhee", "Snake River indian", "Lemhi River indian"
+    indigenous_terms = [term.lower() for term in ["Shoshone", "tribe", "reservation", "native american", "indigenous","Bannock", "Nez Perce", "Coeur d'Alene indian", "Kootenai", "Salish", "Spokane indian", "Shoshone-Bannock", "Fort Hall indian", "Lemhi", "Shoshone-Paiute", "Shoshoni", "Tukudeka", "Sheepeater", "Camas Prairie", "Nimíipuu", "Sahaptin", "Atsina", "Kalispel indian", "Pend d'Oreille", "Yakama indian", "Flathead", "Wenatchi", "Methow", "Entiat indian", "Chelan indian", "Sinkiuse-Columbia", "Wenatchee indian", "Palus", "Cayuse indian", "Umatilla indian", "Tenino indian", "Walla Walla indian", "Nez Percé", "Yakama indian", "Colville indian", "Coeur d'Alene indian", "Spokane indian", "Columbia indian", "Willamette Valley indian", "Clearwater indian", "Salmon River indian", "Payette indian", "Bruneau indian", "Owyhee", "Snake River indian", "Lemhi River indian"
     ]]
 
     # Initialize a Counter to tally occurrences of indigenous-related terms
@@ -558,13 +653,173 @@ top_indigenous_terms = find_indigenous_terms(corpus)
 print("## indigenous")
 for word, count in top_indigenous_terms:
     print(f"{word}: {count}")
+    
+from collections import Counter
+import re
+
+def find_mining_terms(corpus):
+    # Define a list of the top fifty most common mining-related terms
+    mining_terms = [term.lower() for term in [
+        "Mining", "Ore", "Extraction", "Prospecting", "Drilling", "Blasting", 
+        "Excavation", "Fracking", "hydraulic fracturing", "Tunneling", "Shaft sinking", "Open pit", "Underground mining", 
+        "Strip mining", "Quarrying", "Mineral deposit", "Ore body", "Tailings", 
+        "Mine reclamation", "Smelting", "Refining", "Flotation process", "Heap leaching", 
+        "Hydrometallurgy", "Pyrometallurgy", "Drift mining", "Slope mining", 
+        "Room and pillar", "Longwall mining", "Hard rock mining", "Placer mining", 
+        "Dredging", "Coal seam", "Geological survey", "Assay", "Mine ventilation", 
+        "Mine safety", "Explosive charge", "Miner's lamp", "Haul truck", "Conveyor belt", 
+        "Ore grade", "Rock fragmentation", "Mining permit", "Extraction rate", 
+        "Strip ratio", "Reclamation bond", "Processing plant", "Slurry", 
+        "Geotechnical analysis", "Mine closure", "Environmental impact", "Mine drainage"
+    ]]
+
+    # Initialize a Counter to tally occurrences of mining terms
+    mining_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in mining_terms:
+            mining_word_freq[word] += 1
+
+    return mining_word_freq.most_common(20)
+
+# Call the function to find mining terms in the corpus
+top_mining_terms = find_mining_terms(corpus)
+
+# Print the top 150 mining terms
+print("## mining")
+for word, count in top_mining_terms:
+    print(f"{word}: {count}")
+
+from collections import Counter
+import re
+
+def find_timber_terms(corpus):
+    # Define a list of the top fifty most common timber-related terms
+    timber_terms = [term.lower() for term in [
+        "Timber", "Lumber", "Logging", "Forestry", "Sawing", "Felling", 
+        "Deforestation", "Reforestation", "Sawmill", "Plywood", "Hardwood", "Softwood", 
+        "Board foot", "Timberland", "Woodlot", "Log yard", "Milling process", "Kiln drying", 
+        "Air drying", "Wood grain", "Lumber grading", "Plank", "Beam", "Log scaler", 
+        "Chainsaw", "Skidder", "Debarking", "Pulpwood", "Chipboard", 
+        "Veneer", "Crosscut", "Rip cut", "Lath", "Timber frame", "Wood treatment", 
+        "Sustainable forestry", "Clear cutting", "Selective cutting", "Silviculture", 
+        "Tree farm", "Stumpage", "Hectare yield", "Logging permit", "Timber stand", 
+        "Tree felling", "Woodworker", "Wood processing", "Forest conservation", 
+        "Wood preservation"
+    ]]
+
+    # Initialize a Counter to tally occurrences of timber terms
+    timber_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in timber_terms:
+            timber_word_freq[word] += 1
+
+    return timber_word_freq.most_common(20)
+
+# Call the function to find timber terms in the corpus
+top_timber_terms = find_timber_terms(corpus)
+
+# Print the top 150 timber terms
+print("## timber")
+for word, count in top_timber_terms:
+    print(f"{word}: {count}")
+
+from collections import Counter
+import re
+
+def find_manufacturing_terms(corpus):
+    # Define a list of the top fifty most common manufacturing-related terms
+    manufacturing_terms = [term.lower() for term in [
+        "Manufacturing", "Fabrication", "Assembly line", "Machining", 
+        "Casting", "Forging", "Molding", "CNC machining", "Lean manufacturing", 
+        "Quality control", "Process optimization", "Supply chain", "Raw materials", 
+        "Industrial robotics", "Prototyping", "Batch production", "Mass production", 
+        "Just-in-time", "Six Sigma", "Kaizen", "Additive manufacturing", "3D printing", 
+        "Tooling", "Precision engineering", "Injection molding", "Extrusion", "Welding", 
+        "Sheet metal", "Die casting", "Material handling", "Assembly process", 
+        "Industrial safety", "Factory layout", "Workstation", "Operational efficiency", 
+        "Machine calibration", "Inventory management", "Continuous improvement", 
+        "Computer-aided design", "Computer-aided manufacturing", "Automation process", 
+        "Labor productivity", "Quality assurance", "Standardization", "Lean process", 
+        "Production planning", "Equipment maintenance", "Industrial engineering", 
+        "Production workflow"
+    ]]
+
+    # Initialize a Counter to tally occurrences of manufacturing terms
+    manufacturing_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in manufacturing_terms:
+            manufacturing_word_freq[word] += 1
+
+    return manufacturing_word_freq.most_common(20)
+
+# Call the function to find manufacturing terms in the corpus
+top_manufacturing_terms = find_manufacturing_terms(corpus)
+
+# Print the top 150 manufacturing terms
+print("## manufacturing")
+for word, count in top_manufacturing_terms:
+    print(f"{word}: {count}")
+
+from collections import Counter
+import re
+
+def find_transportation_terms(corpus):
+    # Define a list of the top fifty most common railroad and transportation-related terms
+    transportation_terms = [term.lower() for term in [
+        "Railroad", "Railway", "Locomotive", "Freight train", "Passenger train", 
+        "High-speed rail", "Commuter rail", "Light rail", "Subway system", "Monorail", 
+        "Streetcar", "Tramway", "Track gauge", "Railcar", "Diesel engine", "Electric train", 
+        "Steam locomotive", "Bullet train", "Rail yard", "Train station", "Rail bridge", 
+        "Grade crossing", "Switch track", "Rolling stock", "Signal system", "Train dispatch", 
+        "Rail tunnel", "Track maintenance", "Level crossing", "Railroad tie", "Ballast bed", 
+        "Freight corridor", "Passenger corridor", "Intermodal terminal", "Container transport", 
+        "Right of way", "Rail infrastructure", "Train conductor", "Brakeman", "Engineer", 
+        "Freight manifest", "Waybill", "Cargo handling", "Rail logistics", "Timetable", 
+        "Train schedule", "Platform edge", "Railway safety", "Commuter pass", "Transit hub"
+    ]]
+
+    # Initialize a Counter to tally occurrences of transportation terms
+    transportation_word_freq = Counter()
+
+    # Tokenize the corpus to handle multi-word expressions
+    tokens = re.findall(r'\b\w+\b', corpus.lower())
+
+    # Iterate over each token in the corpus
+    for word in tokens:
+        if word in transportation_terms:
+            transportation_word_freq[word] += 1
+
+    return transportation_word_freq.most_common(20)
+
+# Call the function to find transportation terms in the corpus
+top_transportation_terms = find_transportation_terms(corpus)
+
+# Print the top 150 transportation terms
+print("## railroads and transportation")
+for word, count in top_transportation_terms:
+    print(f"{word}: {count}")
 
 from collections import Counter
 import re
 
 def find_manual_labor_terms(corpus):
     # Define a list of the top fifty most common Spanish labor-related terms
-    manual_labor_terms = [term.lower() for term in ["Factory", "labor union", "Union", "Worker", "Laborer", "Employee", "Employer", "Job", "Vocation", "Wage", "Salary", "Paycheck", "Hourly Wage", "Daily Wage", "Weekly Wage", "Overtime", "Minimum wage", "Living wage", "Health Insurance", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Experience", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Service Worker"
+    manual_labor_terms = [term.lower() for term in ["Factory", "labor union", "Union", "Worker", "Laborer", "Employee", "Employer", "Vocation", "Wage", "Salary", "Paycheck", "Hourly Wage", "Daily Wage", "Weekly Wage", "Overtime", "Minimum wage", "Living wage", "Health Insurance", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Service Worker"
     ]]
 
     # Initialize a Counter to tally occurrences of labor terms
@@ -622,7 +877,7 @@ import re
 
 def find_leisure_terms(corpus):
     # Define a list of leisure-related terms
-    leisure_terms = [term.lower() for term in ["ski", "leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "play", "fun", "relaxation", "adventure", "pastime", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "river", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "music", "concert", "movie", "film", "theater", "reading", "library", "board game", "card game", "dance", "bbq"
+    leisure_terms = [term.lower() for term in ["ski", "leisure", "recreation", "entertainment", "activity", "hobby", "pastime", "sports", "game", "fun", "relaxation", "adventure", "pastime", "park", "picnic", "barbecue", "camp", "hike", "trail", "fishing", "hunting", "camping", "bonfire", "campfire", "swimming", "pool", "beach", "lake", "boating", "canoeing", "kayaking", "biking", "cycling", "walking", "running", "hiking", "gardening", "photography", "board game", "card game", "dance"
     ]]
 
     # Initialize a Counter to tally occurrences of leisure-related terms
@@ -680,7 +935,7 @@ import re
 
 def find_technology_terms(corpus):
     # Define a list of technology-related terms
-    technology_terms = [term.lower() for term in ["Fan", "Electric Fan", "Oscillating Fan", "Desk Fan", "Box Fan", "Ceiling Fan", "Portable Fan", "Ventilator", "Computer", "PC", "Software", "Hardware", "Program", "Code", "Data", "Database", "Network", "Internet", "Website", "Browser", "Operating system", "Dataset", "Word processor", "Spreadsheet", "Database", "Modem", "Printer", "Scanner", "Fax machine", "VHS", "Cassette", "Walkman", "Tape recorder", "CD player", "Compact disc", "Video game", "Atari", "Nintendo", "Gameboy", "Sega", "Playstation", "Xbox", "Calculator", "Typewriter", "Telephone", "Answering machine", "Pager", "Television", "VCR", "Remote control", "Antenna", "Cable", "Satellite", "Video cassette", "Walkie-talkie", "Walkie", "Radio", "Cassette player", "Boombox", "Turntable", "Vinyl record", "Record player", "Camera", "Polaroid", "Celluloid", "Flashlight", "Calculator", "Timepiece", "Wristwatch", "Microwave", "Toaster", "Blender", "Vacuum cleaner", "Dishwasher", "Washing machine", "Dryer", "Refrigerator", "Air conditioner", "Ventilator", "Heater", "Thermostat", "Alarm clock"
+    technology_terms = [term.lower() for term in ["Electric Fan", "Oscillating Fan", "Desk Fan", "Box Fan", "Ceiling Fan", "Portable Fan", "Ventilator", "Computer", "PC", "Software", "Hardware", "Data", "Database", "Network", "Internet", "Website", "Browser", "Operating system", "Dataset", "Word processor", "Spreadsheet", "Database", "Modem", "Printer", "Scanner", "Fax machine", "VHS", "Cassette", "Walkman", "Tape recorder", "CD player", "Compact disc", "Video game", "Atari", "Nintendo", "Gameboy", "Sega", "Playstation", "Xbox", "Calculator", "Typewriter", "Telephone", "Answering machine", "Pager", "Television", "VCR", "Remote control", "Antenna", "Cable", "Satellite", "Video cassette", "Walkie-talkie", "Walkie", "Radio", "Cassette player", "Boombox", "Turntable", "Vinyl record", "Record player", "Camera", "Polaroid", "Celluloid", "Flashlight", "Calculator", "Timepiece", "Wristwatch", "Microwave", "Toaster", "Blender", "Vacuum cleaner", "Dishwasher", "Washing machine", "Dryer", "Refrigerator", "Air conditioner", "Ventilator", "Heater", "Thermostat", "Alarm clock"
     ]]
 
     # Initialize a Counter to tally occurrences of technology terms
@@ -764,7 +1019,7 @@ from collections import Counter
 import re
 
 def find_canadian_terms(corpus):
-    canadian_terms = [term.lower() for term in ["Canada", "Canadian", "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec", "Hamilton", "Victoria", "Halifax", "Regina", "Saskatoon", "St. John's", "Kitchener", "Burnaby", "Windsor", "Richmond", "Burlington", "Surrey", "Mississauga", "Markham", "Brampton", "Vaughan", "Oakville", "Niagara Falls", "Waterloo", "Guelph", "Cambridge", "Kelowna", "Fredericton", "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit", "Ontario", "Quebec", "Nova Scotia", "New Brunswick", "Manitoba", 
+    canadian_terms = [term.lower() for term in ["Canada", "Canadian", "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec", "Victoria", "Halifax", "Regina", "Saskatoon", "St. John's", "Kitchener", "Burnaby", "Windsor", "Richmond", "Burlington", "Surrey", "Mississauga", "Markham", "Brampton", "Vaughan", "Oakville", "Niagara Falls", "Waterloo", "Guelph", "Cambridge", "Kelowna", "Fredericton", "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit", "Ontario", "Quebec", "Nova Scotia", "New Brunswick", "Manitoba", 
     ]]
 
     canadian_word_freq = Counter()
@@ -1281,65 +1536,6 @@ for word, count in top_swedish_terms:
 
 # === Custom Section ===
 
-from collections import Counter
-import re
-
-def find_federal_terms(corpus):
-    federal_terms = [term.lower() for term in [
-        "Federal", "Public Lands", "Bureau of Land Management", "Forest Service", 
-        "National Park", "Wildlife Refuge", "Grazing Rights", "Land Transfer", "Federal Ownership", 
-        "Sagebrush Rebellion", "Logging", "Mining", "Drilling", "Natural Resources", 
-        "State Sovereignty", "Land Use", "Wilderness Act", "Homestead Act", "Land Policy"
-    ]]
-
-    federal_word_freq = Counter()
-
-    # Tokenize the corpus to handle multi-word expressions
-    tokens = re.findall(r'\b\w+\b', corpus.lower())
-
-    # Iterate over tokens and check for exact matches with federal terms
-    for word in tokens:
-        if word in federal_terms:
-            federal_word_freq[word] += 1
-
-
-    return federal_word_freq.most_common(5)
-
-top_federal_terms = find_federal_terms(corpus)
-
-print("## federal")
-for word, count in top_federal_terms:
-    print(f"{word}: {count}")
-    
-from collections import Counter
-import re    
-
-def find_conservation_terms(corpus):
-    conservation_terms = [term.lower() for term in [
-        "Conservation", "Wildlife", "Endangered Species", 
-        "Habitat", "National Park", "Wilderness", "Sustainability", "Deforestation", 
-        "Climate Change", "Drought", "Water Rights", "Columbia River", "Irrigation", 
-        "Renewable Energy", "Logging Ban", "Reforestation", "Clean Energy", "EPA", "Emissions", 
-        "Wildfire", "Air Quality", "Pollution", "Natural Resource Management"
-    ]]
-
-    conservation_word_freq = Counter()
-
-    # Tokenize the corpus to handle multi-word expressions
-    tokens = re.findall(r'\b\w+\b', corpus.lower())
-
-    # Iterate over tokens and check for matches with conservation terms
-    for word in tokens:
-        if word in conservation_terms:
-            conservation_word_freq[word] += 1
-
-    return conservation_word_freq.most_common(5)
-
-top_conservation_terms = find_conservation_terms(corpus)
-
-print("## conservation")
-for word, count in top_conservation_terms:
-    print(f"{word}: {count}")
 
 from collections import Counter
 import re
