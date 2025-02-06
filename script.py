@@ -156,7 +156,7 @@ import re
 
 def find_fashion_terms(corpus):
     # Define a list of fashion-related terms
-    fashion_terms = [term.lower() for term in ["clothing", "fashion", "style", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "dress", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "budget", "affordable", "sale", "discount", "clearance", "shopping", "store", "retail", "department store", "mall"
+    fashion_terms = [term.lower() for term in ["clothing", "fashion", "apparel", "outfit", "wardrobe", "jeans", "t-shirt", "sweater", "jacket", "dress", "skirt", "pants", "shoes", "boots", "sneakers", "hat", "cap", "scarf", "gloves", "socks", "underwear", "outerwear", "workwear", "uniform", "overalls", "apron", "denim", "flannel", "plaid", "cotton", "polyester", "fabric", "stitching", "seamstress", "tailor", "alterations", "thrift", "secondhand", "budget", "affordable", "sale", "discount", "clearance", "shopping", "store", "retail", "department store", "mall"
     ]]
 
     # Initialize a Counter to tally occurrences of fashion-related terms
@@ -245,7 +245,7 @@ import re
 
 def find_culture_terms(corpus):
     # Define a list of culture-related terms
-    culture_terms = [term.lower() for term in ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "language", "dialect", "family", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "skills", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"
+    culture_terms = [term.lower() for term in ["tradition", "folklore", "customs", "rituals", "celebration", "values", "community", "cuisine", "festivals", "art", "music", "language", "dialect", "family", "identity", "belonging", "neighborhood", "gathering", "gatherings", "socializing", "stories", "folktales", "legends", "crafts", "craftsmanship", "oral tradition", "ethnicity", "diversity", "inclusion", "community centers", "street fairs", "parades", "food trucks", "ethnic foods", "local traditions", "folk music", "folk dance", "folk art", "cultural exchange", "cultural identity", "cultural pride", "multiculturalism", "ethnic neighborhoods"
     ]]
 
     # Initialize a Counter to tally occurrences of culture-related terms
@@ -390,7 +390,7 @@ import re
 
 def find_food_and_drink_terms(corpus):
     # Define a list of the top fifty most common Spanish food and drink terms
-    food_and_drink_terms = [term.lower() for term in ["Potato", "Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Water", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Marmalade", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Fruit spread", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Almonds", "Raisins"
+    food_and_drink_terms = [term.lower() for term in ["Potato", "Beans", "Beef", "Pork", "Chicken", "Milk", "Bread", "Butter", "Eggs", "Cheese", "Apple", "Pie", "Peach", "Biscuit", "Coffee", "Tea", "Beer", "Whiskey", "Soda", "Soup", "Stew", "Salad", "Corn", "Wheat", "Barley", "Oats", "Onion", "Garlic", "Salt", "Pepper", "Lard", "Marmalade", "Honey", "Cider", "Vinegar", "Bacon", "Sausage", "Jerky", "Pickles", "Fruit spread", "Cake", "Cookies", "Doughnuts", "Ice cream", "Candy", "Chocolate", "Almonds", "Raisins"
     ]]
 
     # Initialize a Counter to tally occurrences of food and drink terms
@@ -535,7 +535,7 @@ import re
 
 def find_indigenous_terms(corpus):
     # Define a list of indigenous-related terms specific to tribes of Idaho
-    indigenous_terms = [term.lower() for term in ["Shoshone", "Bannock", "Nez Perce", "Coeur d'Alene", "Kootenai", "Salish", "Spokane", "Shoshone-Bannock", "Fort Hall", "Lemhi", "Shoshone-Paiute", "Shoshoni", "Tukudeka", "Sheepeater", "Camas Prairie", "Nimíipuu", "Sahaptin", "Atsina", "Kalispel", "Pend d'Oreille", "Yakama", "Flathead", "Wenatchi", "Methow", "Entiat", "Chelan", "Sinkiuse-Columbia", "Wenatchee", "Palus", "Cayuse", "Umatilla", "Tenino", "Walla Walla", "Nez Percé", "Yakama", "Colville", "Coeur d'Alene", "Spokane", "Columbia", "Snake", "Willamette Valley", "Clearwater", "Salmon River", "Payette", "Boise", "Bruneau", "Owyhee", "Snake River", "Lemhi River"
+    indigenous_terms = [term.lower() for term in ["Shoshone", "Bannock", "Nez Perce", "Coeur d'Alene", "Kootenai", "Salish", "Spokane", "Shoshone-Bannock", "Fort Hall", "Lemhi", "Shoshone-Paiute", "Shoshoni", "Tukudeka", "Sheepeater", "Camas Prairie", "Nimíipuu", "Sahaptin", "Atsina", "Kalispel", "Pend d'Oreille", "Yakama", "Flathead", "Wenatchi", "Methow", "Entiat", "Chelan", "Sinkiuse-Columbia", "Wenatchee", "Palus", "Cayuse", "Umatilla", "Tenino", "Walla Walla", "Nez Percé", "Yakama", "Colville", "Coeur d'Alene", "Spokane", "Columbia", "Snake", "Willamette Valley", "Clearwater", "Salmon River", "Payette", "Bruneau", "Owyhee", "Snake River", "Lemhi River"
     ]]
 
     # Initialize a Counter to tally occurrences of indigenous-related terms
@@ -564,7 +564,7 @@ import re
 
 def find_manual_labor_terms(corpus):
     # Define a list of the top fifty most common Spanish labor-related terms
-    manual_labor_terms = [term.lower() for term in ["Factory", "labor union", "Union", "Worker", "Laborer", "Employee", "Employer", "Job", "Vocation", "Wage", "Salary", "Paycheck", "Hourly Wage", "Daily Wage", "Weekly Wage", "Overtime", "Minimum wage", "Living wage", "Health Insurance", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Skills", "Experience", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Service Worker"
+    manual_labor_terms = [term.lower() for term in ["Factory", "labor union", "Union", "Worker", "Laborer", "Employee", "Employer", "Job", "Vocation", "Wage", "Salary", "Paycheck", "Hourly Wage", "Daily Wage", "Weekly Wage", "Overtime", "Minimum wage", "Living wage", "Health Insurance", "Healthcare", "Retirement", "Pension", "Sick leave", "Vacation", "Maternity leave", "Paternity leave", "Paid time off", "Layoff", "Dismissal", "Termination", "Hiring", "Firing", "Training", "Experience", "Manual labor", "Blue-collar", "Workplace", "Factory floor", "Assembly line", "Warehouse", "Construction", "Maintenance", "Janitorial", "Service industry", "Service Worker"
     ]]
 
     # Initialize a Counter to tally occurrences of labor terms
@@ -739,7 +739,7 @@ from collections import Counter
 import re
 
 def find_british_terms(corpus):
-    british_terms = [term.lower() for term in ["British", "Britain", "London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Bristol", "Sheffield", "Newcastle", "Cardiff", "Nottingham", "Southampton", "Leicester", "Brighton", "Portsmouth", "Plymouth", "Derby", "Hull", "Middlesbrough", "Northampton", "Luton", "Wolverhampton", "Norwich", "Swansea", "Oxford", "Cambridge", "Exeter", "Yorkshire", "Cornwall", "Essex", "Kent", "Surrey", "Devon", "England"
+    british_terms = [term.lower() for term in ["British", "Britain", "London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Bristol", "Sheffield", "Newcastle", "Cardiff", "Nottingham", "Southampton", "Leicester", "Brighton", "Portsmouth", "Plymouth", "Derby", "Hull", "Middlesbrough", "Northampton", "Luton", "Wolverhampton", "Norwich", "Swansea", "Oxford", "Cambridge", "Exeter", "Yorkshire", "Cornwall", "Essex", "Surrey", "Devon", "England"
     ]]
     
     british_word_freq = Counter()
@@ -841,7 +841,7 @@ from collections import Counter
 import re
 
 def find_french_terms(corpus):
-    french_terms = [term.lower() for term in ["French", "France", "Paris", "Marseille", "Lyon", "Toulouse", "Nice", "Nantes", "Strasbourg", "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Le Havre", "Cergy", "Saint-Étienne", "Toulon", "Angers", "Grenoble", "Dijon", "Nîmes", "Aix-en-Provence", "Saint-Quentin-en-Yvelines", "Brest", "Le Mans", "Amiens", "Tours", "Limoges", "Clermont-Ferrand", "Villeurbanne", "Besançon", "Orléans", "Metz", "Rouen", "Mulhouse", "Perpignan", "Caen", "Nancy", "Argenteuil", "Saint-Denis", "Roubaix", "Tourcoing", "Avignon", "Poitiers", "Créteil", "Nanterre", "Versailles"
+    french_terms = [term.lower() for term in ["French", "France", "Marseille", "Lyon", "Toulouse", "Nantes", "Strasbourg", "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Le Havre", "Cergy", "Saint-Étienne", "Toulon", "Angers", "Grenoble", "Dijon", "Nîmes", "Aix-en-Provence", "Saint-Quentin-en-Yvelines", "Brest", "Le Mans", "Amiens", "Tours", "Limoges", "Clermont-Ferrand", "Villeurbanne", "Besançon", "Orléans", "Metz", "Rouen", "Mulhouse", "Perpignan", "Caen", "Nancy", "Argenteuil", "Saint-Denis", "Roubaix", "Tourcoing", "Avignon", "Poitiers", "Créteil", "Nanterre", "Versailles"
     ]]
     
     french_word_freq = Counter()
@@ -891,7 +891,7 @@ from collections import Counter
 import re
 
 def find_greek_terms(corpus):
-    greek_terms = [term.lower() for term in ["Greek", "Greece", "Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa", "Volos", "Ioannina", "Chania", "Chalcis", "Rethymno", "Serres", "Kavala", "Drama", "Komotini", "Alexandroupoli", "Katerini", "Veria", "Trikala", "Lamia", "Kozani", "Polichni", "Karditsa", "Sykies", "Nea Ionia", "Ioannis", "Agia Paraskevi", "Palaio Faliro", "Tripoli", "Galatsi", "Agrinio", "Chios", "Mytilene", "Kalamata", "Kavala", "Volos", "Larissa", "Heraklion", "Chalkida", "Thiva", "Sparta", "Corfu", "Lamia", "Rhodes", "Karditsa", "Kastoria", "Kavala"
+    greek_terms = [term.lower() for term in ["Greek", "Greece", "Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa", "Volos", "Ioannina", "Chania", "Chalcis", "Rethymno", "Serres", "Kavala", "Komotini", "Alexandroupoli", "Katerini", "Veria", "Trikala", "Lamia", "Kozani", "Polichni", "Karditsa", "Sykies", "Nea Ionia", "Ioannis", "Agia Paraskevi", "Palaio Faliro", "Tripoli", "Galatsi", "Agrinio", "Chios", "Mytilene", "Kalamata", "Kavala", "Volos", "Larissa", "Heraklion", "Chalkida", "Thiva", "Sparta", "Corfu", "Lamia", "Rhodes", "Karditsa", "Kastoria", "Kavala"
     ]]
     
     greek_word_freq = Counter()
@@ -920,20 +920,20 @@ def find_geographic_words(corpus):
     idaho_geographic_places = [place.lower() for place in [
         "Caldwell", "Idaho Falls", "Pocatello", "Rupert", "Boise", "Nampa", "Emmett", "Twin Falls", "Burley", 
         "Moscow", "Lewiston", "Mountain Home", "Blackfoot", "Post Falls", "Sandpoint", "Jerome", "Weiser", 
-        "Eagle", "Star", "Middleton", "Rathdrum", "Bonners Ferry", "St. Maries", "Spirit Lake", "Glenns Ferry", 
+        "Eagle", "Middleton", "Rathdrum", "Bonners Ferry", "St. Maries", "Spirit Lake", "Glenns Ferry", 
         "Parma", "Kimberly", "St. Anthony", "Gooding", "McCall", "Driggs", "American Falls", "Grangeville", "Fountain", 
         "Acequia", "Albion", "Arco", "Athol", "Bellevue", "Bloomington", "Bruneau", "Buhl", "Challis", "Clayton", "Clifton", 
-        "Cottonwood", "Council", "Crouch", "Culdesac", "Dayton", "Dover", "Downey", "Drummond", "Dubois", "Elk City", 
-        "Fairfield", "Fenn", "Fernwood", "Fort Hall", "Franklin", "Fruitland", "Garden City", "Genesee", "Grace", "Greenleaf", 
+        "Cottonwood", "Council, Idaho", "Crouch", "Culdesac", "Dayton", "Dover", "Downey", "Drummond", "Dubois", "Elk City", 
+        "Fairfield", "Fenn", "Fernwood", "Fort Hall", "Fruitland", "Garden City", "Genesee", "Greenleaf", 
         "Hagerman", "Hansen", "Hazelton", "Heyburn", "Holbrook", "Homedale", "Horseshoe Bend", "Huetter", "Huston", "Inkom", 
         "Iona", "Julietta", "Kamiah", "Kendrick", "Ketchum", "Kooskia", "Kootenai", "Kuna", "Lapwai", "Lava Hot Springs", 
         "Leadore", "Lemhi", "Letha", "Lost River", "Mackay", "Malad City", "Malta", "Marsing", "Melba", "Menan", "Mink Creek", 
         "Montpelier", "Monteview", "Montour", "Moore", "Mountain Home AFB", "Mud Lake", "Mullan", "Murtaugh", "Newdale", 
-        "New Meadows", "New Plymouth", "Nezperce", "Notus", "Oakley", "Oldtown", "Onaway", "Orofino", "Osburn", "Paris", 
-        "Parker", "Parkline", "Paul", "Payette", "Peck", "Picabo", "Pinehurst", "Placerville", "Plummer", "Pollock", "Potlatch", 
+        "New Meadows", "New Plymouth", "Nezperce", "Notus", "Oakley", "Oldtown", "Onaway", "Orofino", "Osburn", 
+        "Parker", "Parkline", "Payette", "Peck", "Picabo", "Pinehurst", "Placerville", "Plummer", "Pollock", "Potlatch", 
         "Preston", "Priest Lake", "Priest River", "Rexburg", "Richfield", "Rigby", "Rimini", "Riverside", "Rockford", "Rockland", 
         "Sagle", "Shelley", "Shoshone", "Smelterville", "Soda Springs", "Spalding", "Spencer", "Stanley", "Sugar City", 
-        "Sun Valley", "Swan Valley", "Terry", "Teton", "Tetonia", "Troy", "Uhland", "Victor", "Wallace", "Wardner", "Warm River", 
+        "Sun Valley", "Swan Valley", "Terry", "Teton", "Tetonia", "Troy", "Uhland", "Victor", "Wallace, Idaho", "Wardner", "Warm River", 
         "Weippe", "Wendell", "Weston", "White Bird", "Wilder", "Winchester", "Worley"]]
 
     # Initialize a Counter to tally occurrences of geographic place names
