@@ -127,7 +127,7 @@ import re
 
 def find_animal_terms(corpus):
     # Define a list of the top fifty most common Spanish animal-related terms
-    animal_terms = [term.lower() for term in ["cow", "sheep", "horse", "goat", "pig", "chicken", "turkey", "duck", "quail", "rabbit", "squirrel", "moose", "elk", "deer", "bear", "coyote", "wolf", "fox", "mountain lion", "raccoon", "skunk", "badger", "possum", "weasel", "ferret", "mink", "otter", "beaver", "muskrat", "marmot", "gopher", "prairie dog", "chipmunk", "bison", "buffalo", "lizard", "snake", "frog", "toad", "newt", "salamander", "owl", "hawk", "eagle", "raven", "crow", "sparrow", "finch", "bluebird", "cougar"
+    animal_terms = [term.lower() for term in ["cow", "sheep", "horse", "salmon", "goat", "pig", "chicken", "turkey", "duck", "quail", "rabbit", "squirrel", "moose", "elk", "deer", "bear", "coyote", "wolf", "fox", "mountain lion", "raccoon", "skunk", "badger", "wolves", "possum", "weasel", "ferret", "mink", "otter", "beaver", "muskrat", "marmot", "gopher", "prairie dog", "chipmunk", "bison", "buffalo", "lizard", "snake", "frog", "toad", "newt", "salamander", "owl", "hawk", "eagle", "raven", "crow", "sparrow", "finch", "bluebird", "cougar"
     ]]  # Add more as needed
 
     # Initialize a Counter to tally occurrences of animal terms
@@ -724,8 +724,8 @@ def find_basque_terms(corpus):
 
     # Iterate over tokens and check for matches with Basque terms
     for word in tokens:
-        if word.lower() in basque_terms:
-            basque_word_freq[word.lower()] += 1
+        if word in basque_terms:
+            basque_word_freq[word] += 1
 
     return basque_word_freq.most_common(5)
 
@@ -805,8 +805,8 @@ def find_chinese_terms(corpus):
 
     # Iterate over tokens and check for matches with Chinese terms
     for word in tokens:
-        if word.lower() in chinese_terms:
-            chinese_word_freq[word.lower()] += 1
+        if word in chinese_terms:
+            chinese_word_freq[word] += 1
 
     return chinese_word_freq.most_common(5)
 
@@ -859,8 +859,8 @@ def find_french_terms(corpus):
 
     # Iterate over tokens and check for matches with French terms
     for word in tokens:
-        if word.lower() in french_terms:
-            french_word_freq[word.lower()] += 1
+        if word in french_terms:
+            french_word_freq[word] += 1
 
     return french_word_freq.most_common(5)
 
@@ -884,8 +884,8 @@ def find_german_terms(corpus):
 
     # Iterate over tokens and check for matches with German terms
     for word in tokens:
-        if word.lower() in german_terms:
-            german_word_freq[word.lower()] += 1
+        if word in german_terms:
+            german_word_freq[word] += 1
 
     return german_word_freq.most_common(5)
 
@@ -909,8 +909,8 @@ def find_greek_terms(corpus):
 
     # Iterate over tokens and check for matches with Greek terms
     for word in tokens:
-        if word.lower() in greek_terms:
-            greek_word_freq[word.lower()] += 1
+        if word in greek_terms:
+            greek_word_freq[word] += 1
 
     return greek_word_freq.most_common(5)
 
@@ -940,7 +940,7 @@ def find_geographic_words(corpus):
         "New Meadows", "New Plymouth", "Nezperce", "Notus", "Oakley", "Oldtown", "Onaway", "Orofino", "Osburn", "Paris", 
         "Parker", "Parkline", "Paul", "Payette", "Peck", "Picabo", "Pinehurst", "Placerville", "Plummer", "Pollock", "Potlatch", 
         "Preston", "Priest Lake", "Priest River", "Rexburg", "Richfield", "Rigby", "Rimini", "Riverside", "Rockford", "Rockland", 
-        "Sagle", "Salmon", "Shelley", "Shoshone", "Smelterville", "Soda Springs", "Spalding", "Spencer", "Stanley", "Sugar City", 
+        "Sagle", "Shelley", "Shoshone", "Smelterville", "Soda Springs", "Spalding", "Spencer", "Stanley", "Sugar City", 
         "Sun Valley", "Swan Valley", "Terry", "Teton", "Tetonia", "Troy", "Uhland", "Victor", "Wallace", "Wardner", "Warm River", 
         "Weippe", "Wendell", "Weston", "White Bird", "Wilder", "Winchester", "Worley"]]
 
@@ -985,7 +985,7 @@ def find_indian_terms(corpus):
 
     # Iterate over tokens and check for matches with Indian terms
     for word in tokens:
-        if word.lower() in indian_terms:
+        if word in indian_terms:
             indian_word_freq[word] += 1
 
     return indian_word_freq.most_common(5)
@@ -1039,8 +1039,8 @@ def find_italian_terms(corpus):
 
     # Iterate over tokens and check for matches with Italian terms
     for word in tokens:
-        if word.lower() in italian_terms:
-            italian_word_freq[word.lower()] += 1
+        if word in italian_terms:
+            italian_word_freq[word] += 1
 
     return italian_word_freq.most_common(5)
 
@@ -1064,8 +1064,8 @@ def find_japanese_terms(corpus):
 
     # Iterate over tokens and check for matches with Japanese terms
     for word in tokens:
-        if word.lower() in japanese_terms:
-            japanese_word_freq[word.lower()] += 1
+        if word in japanese_terms:
+            japanese_word_freq[word] += 1
 
     return japanese_word_freq.most_common(5)
 
@@ -1091,8 +1091,8 @@ def find_mexican_terms(corpus):
 
     # Iterate over tokens and check for matches with Mexican terms
     for word in tokens:
-        if word.lower() in [term.lower() for term in mexican_terms]:
-            mexican_word_freq[word.lower()] += 1
+        if word in [term.lower() for term in mexican_terms]:
+            mexican_word_freq[word] += 1
 
     return mexican_word_freq.most_common(5)
 
@@ -1145,8 +1145,8 @@ def find_philippine_terms(corpus):
 
     # Iterate over tokens and check for matches with Philippine terms
     for word in tokens:
-        if word.lower() in philippine_terms:
-            philippine_word_freq[word.lower()] += 1
+        if word in philippine_terms:
+            philippine_word_freq[word] += 1
 
     return philippine_word_freq.most_common(5)
 
@@ -1172,8 +1172,8 @@ def find_polish_terms(corpus):
 
     # Iterate over tokens and check for matches with Polish terms
     for word in tokens:
-        if word.lower() in polish_terms:
-            polish_word_freq[word.lower()] += 1
+        if word in polish_terms:
+            polish_word_freq[word] += 1
 
     return polish_word_freq.most_common(5)
 
@@ -1203,10 +1203,10 @@ def find_portuguese_terms(corpus):
     # Tokenize the corpus to handle multi-word expressions
     tokens = re.findall(r'\b\w+\b', corpus.lower())
 
-    # Iterate over tokens and check for matches with Portuguese terms
+    # Iterate over tokens and count only exact matches
     for word in tokens:
-        if word.lower() in portuguese_terms:
-            portuguese_word_freq[word.lower()] += 1
+        if word in portuguese_terms:
+            portuguese_word_freq[word] += 1
 
     return portuguese_word_freq.most_common(5)
 
@@ -1228,12 +1228,10 @@ def find_scottish_terms(corpus):
     # Tokenize the corpus to handle multi-word expressions
     tokens = re.findall(r'\b\w+\b', corpus.lower())
 
-    # Iterate over tokens and check for matches with Scottish terms
+    # Iterate over tokens and check for exact matches with Scottish terms
     for word in tokens:
-        # Check for partial matches
-        for term in scottish_terms:
-            if term.lower() in word:
-                scottish_word_freq[term.lower()] += 1
+        if word in scottish_terms:
+            scottish_word_freq[word] += 1
 
     return scottish_word_freq.most_common(5)
 
@@ -1257,8 +1255,8 @@ def find_spanish_terms(corpus):
 
     # Iterate over tokens and check for matches with Spanish terms
     for word in tokens:
-        if word.lower() in spanish_terms:
-            spanish_word_freq[word.lower()] += 1
+        if word in spanish_terms:
+            spanish_word_freq[word] += 1
 
     return spanish_word_freq.most_common(5)
 
@@ -1272,7 +1270,7 @@ from collections import Counter
 import re
 
 def find_swedish_terms(corpus):
-    swedish_terms = [term.lower() for term in ["Swedish", "Swede", "Swedes", "Scandinavian", "Stockholm", "Sweden", "Gothenburg", "Malmö", "Uppsala", "Linköping", "Norrköping", "Örebro", "Västerås", "Helsingborg", "Jönköping", "Umeå", "Lund", "Borås", "Sundsvall", "Gävle", "Östersund", "Eskilstuna", "Södertälje", "Halmstad", "Växjö", "Karlstad", "Trollhättan", "Örnsköldsvik", "Kalmar", "Kristianstad", "Falun", "Borlänge", "Skövde", "Karlskrona", "Visby", "Luleå", "Tumba", "Märsta", "Alingsås", "Östersund", "Vänersborg", "Täby", "Hässleholm", "Trelleborg", "Nyköping", "Piteå", "Lidingö"
+    swedish_terms = [term.lower() for term in ["Swedish", "Swede", "Swedes", "Scandinavian", "Stockholm", "Sweden", "Gothenburg", "Malmö", "Uppsala", "Linköping", "Norrköping", "Örebro", "Västerås", "Helsingborg", "Jönköping", "Umeå", "Lund", "Borås", "Sundsvall", "Gävle", "Östersund", "Eskilstuna", "Södertälje", "Halmstad", "Växjö", "Karlstad", "Trollhättan", "Örnsköldsvik", "Kalmar", "Kristianstad", "Falun", "Borlänge", "Skövde", "Karlskrona", "Visby", "Luleå", "Märsta", "Alingsås", "Östersund", "Vänersborg", "Täby", "Hässleholm", "Trelleborg", "Nyköping", "Piteå", "Lidingö"
     ]]
 
     swedish_word_freq = Counter()
@@ -1282,12 +1280,10 @@ def find_swedish_terms(corpus):
 
     # Iterate over tokens and check for matches with Swedish terms
     for word in tokens:
-        # Check for partial matches
-        for term in swedish_terms:
-            if term.lower() in word:
-                swedish_word_freq[term.lower()] += 1
+        if word in swedish_terms:
+            swedish_word_freq[word] += 1
 
-    return swedish_word_freq.most_common(50)
+    return swedish_word_freq.most_common(5)
 
 top_swedish_terms = find_swedish_terms(corpus)
 
@@ -1302,7 +1298,7 @@ import re
 
 def find_federal_terms(corpus):
     federal_terms = [term.lower() for term in [
-        "Federal", "State", "Public Lands", "BLM", "Bureau of Land Management", "Forest Service", 
+        "Federal", "Public Lands", "Bureau of Land Management", "Forest Service", 
         "National Park", "Wildlife Refuge", "Grazing Rights", "Land Transfer", "Federal Ownership", 
         "Sagebrush Rebellion", "Logging", "Mining", "Drilling", "Natural Resources", 
         "State Sovereignty", "Land Use", "Wilderness Act", "Homestead Act", "Land Policy"
@@ -1313,12 +1309,11 @@ def find_federal_terms(corpus):
     # Tokenize the corpus to handle multi-word expressions
     tokens = re.findall(r'\b\w+\b', corpus.lower())
 
-    # Iterate over tokens and check for matches with federal terms
+    # Iterate over tokens and check for exact matches with federal terms
     for word in tokens:
-        # Check for partial matches
-        for term in federal_terms:
-            if term.lower() in word:
-                federal_word_freq[term.lower()] += 1
+        if word in federal_terms:
+            federal_word_freq[word] += 1
+
 
     return federal_word_freq.most_common(5)
 
@@ -1333,7 +1328,7 @@ import re
 
 def find_conservation_terms(corpus):
     conservation_terms = [term.lower() for term in [
-        "Conservation", "Environment", "Wildlife", "Endangered Species", "Salmon", "Wolves", 
+        "Conservation", "Wildlife", "Endangered Species", 
         "Habitat", "National Park", "Wilderness", "Sustainability", "Deforestation", 
         "Climate Change", "Drought", "Water Rights", "Columbia River", "Irrigation", 
         "Renewable Energy", "Logging Ban", "Reforestation", "Clean Energy", "EPA", "Emissions", 
@@ -1347,10 +1342,8 @@ def find_conservation_terms(corpus):
 
     # Iterate over tokens and check for matches with conservation terms
     for word in tokens:
-        # Check for partial matches
-        for term in conservation_terms:
-            if term.lower() in word:
-                conservation_word_freq[term.lower()] += 1
+        if word in conservation_terms:
+                conservation_word_freq[word] += 1
 
     return conservation_word_freq.most_common(5)
 
@@ -1375,7 +1368,6 @@ def find_reproductive_rights_terms(corpus):
 
     # Iterate over each token in the corpus
     for word in tokens:
-        # Check if the token is a reproductive rights-related term
         if word in reproductive_rights_terms:
             reproductive_rights_word_freq[word] += 1
 
