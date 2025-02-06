@@ -158,4 +158,85 @@ If using a virtual environment, ensure it is activated before running the comman
 ### 3. File Path Errors on macOS
 Ensure that file paths use forward slashes (`/`) instead of backslashes (`\`) on macOS.
 
+---
 
+## Connecting Individual Transcripts to Tag Sheet
+
+In the transcript, enter the Apps Script extension and enter:
+
+function fillTags() {
+  // Get the active spreadsheet
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // Get the transcript sheet by name
+  var transcriptSheet = spreadsheet.getSheetByName("transcript_name");
+  if (!transcriptSheet) {
+    Logger.log("Transcript sheet not found");
+    return;
+  }
+  
+  // Get the tags spreadsheet by URL
+  var tagsSpreadsheet = SpreadsheetApp.openByUrl("tag_sheet_url");
+  if (!tagsSpreadsheet) {
+    Logger.log("Tags spreadsheet not found");
+    return;
+  }
+  
+  // Get the tags sheet within the tags spreadsheet
+  var tagsSheet = tagsSpreadsheet.getSheetByName("tags");
+  if (!tagsSheet) {
+    Logger.log("Tags sheet not found");
+    return;
+  }
+  
+  // Get the range of the transcript column
+  var transcriptRange = transcriptSheet.getRange("D1:D" + transcriptSheet.getLastRow());
+  var transcriptValues = transcriptRange.getValues();
+  
+  // Get the range of example words and tags in the tags sheet
+  var exampleWordsRange = tagsSheet.getRange("B2:B" + tagsSheet.getLastRow());
+  var tagsRange = tagsSheet.getRange("A2:A" + tagsSheet.getLastRow());
+  var exampleWordsValues = exampleWordsRange.getValues();
+  var tagsValues = tagsRange.getValues();
+  
+  // Create a map of example words to tags
+  var tagsMap = {};
+  for (var i = 0; i < exampleWordsValues.length; i++) {
+    var word = exampleWordsValues[i][0].toLowerCase();
+    var tag = tagsValues[i][0];
+    tagsMap[word] = tag;
+  }
+  
+  // Initialize an array to store the tags for each transcript entry
+  var transcriptTags = [];
+  
+  // Loop through each transcript entry
+  for (var i = 0; i < transcriptValues.length; i++) {
+    var text = transcriptValues[i][0];
+    var uniqueTags = [];
+    
+    if (typeof text === 'string') {
+      // Use regular expression to extract words and handle punctuation
+      var words = text.match(/\b\w+['-]?\w*|\w+['-]?\w*\b/g);
+      
+      // Check each word in the transcript entry against the tags map
+      if (words) {
+        for (var j = 0; j < words.length; j++) {
+          var word = words[j].toLowerCase().replace(/[.,!?;:()]/g, '');
+          if (tagsMap.hasOwnProperty(word) && !uniqueTags.includes(tagsMap[word])) {
+            uniqueTags.push(tagsMap[word]);
+          }
+        }
+      }
+    }
+    
+    // Add the determined tags to the array
+    transcriptTags.push([uniqueTags.join(";")]);
+  }
+  
+  // Get the range of the tags column in the transcript sheet
+  var tagsColumn = transcriptSheet.getRange("E1:E" + transcriptTags.length);
+  
+  // Set the values in the tags column to the determined tags
+  tagsColumn.setValues(transcriptTags);
+}
