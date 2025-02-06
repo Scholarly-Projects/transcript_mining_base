@@ -107,7 +107,6 @@ def find_agriculture_terms(corpus):
 
     # Iterate over each token in the corpus
     for word in tokens:
-        # Check if the token is an agriculture-related term
         if word in agriculture_terms:
             agriculture_word_freq[word] += 1
 
@@ -138,7 +137,6 @@ def find_animal_terms(corpus):
 
     # Iterate over each token in the corpus
     for word in tokens:
-        # Check if the token is an animal term
         if word in animal_terms:
             animal_word_freq[word] += 1
 
@@ -751,10 +749,8 @@ def find_british_terms(corpus):
 
     # Iterate over tokens and check for matches with British terms
     for word in tokens:
-        # Check for partial matches
-        for term in british_terms:
-            if term.lower() in word:
-                british_word_freq[term.lower()] += 1
+        if word in british_terms:
+            british_word_freq[word] += 1
 
     return british_word_freq.most_common(5)
 
@@ -779,10 +775,8 @@ def find_canadian_terms(corpus):
 
     # Iterate over tokens and check for matches with Canadian terms
     for word in tokens:
-        # Check for partial matches
-        for term in canadian_terms:
-            if term.lower() in word:
-                canadian_word_freq[term.lower()] += 1
+        if word in canadian_terms:
+            canadian_word_freq[word] += 1
 
     return canadian_word_freq.most_common(5)
 
@@ -832,10 +826,8 @@ def find_finnish_terms(corpus):
 
     # Iterate over tokens and check for matches with Finnish terms
     for word in tokens:
-        # Check for partial matches
-        for term in finnish_terms:
-            if term.lower() in word:
-                finnish_word_freq[term.lower()] += 1
+        if word in finnish_terms:
+            finnish_word_freq[word] += 1
 
     return finnish_word_freq.most_common(5)
 
@@ -1012,10 +1004,8 @@ def find_irish_terms(corpus):
 
     # Iterate over tokens and check for matches with Irish terms
     for word in tokens:
-        # Check for partial matches
-        for term in irish_terms:
-            if term.lower() in word:
-                irish_word_freq[term.lower()] += 1
+        if word in irish_terms:
+            irish_word_freq[word] += 1
 
     return irish_word_freq.most_common(5)
 
@@ -1091,7 +1081,7 @@ def find_mexican_terms(corpus):
 
     # Iterate over tokens and check for matches with Mexican terms
     for word in tokens:
-        if word in [term.lower() for term in mexican_terms]:
+        if word in mexican_terms:
             mexican_word_freq[word] += 1
 
     return mexican_word_freq.most_common(5)
@@ -1108,7 +1098,7 @@ from collections import Counter
 import re
 
 def find_norwegian_terms(corpus):
-    norwegian_terms = [term.lower() for term in ["Norwegian", "Norway", "Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Tromsø", "Drammen", "Fredrikstad", "Skien", "Sandnes", "Sarpsborg", "Bodø", "Ålesund", "Haugesund", "Moss", "Porsgrunn", "Arendal", "Tønsberg", "Hamar", "Ytre Enebakk", "Halden", "Larvik", "Askøy", "Kongsberg", "Harstad", "Molde", "Steinkjer", "Lillehammer", "Gjøvik", "Kristiansund", "Narvik", "Horten", "Leirvik", "Mandal", "Voss", "Mo i Rana", "Namsos", "Lillestrøm", "Sandefjord", "Hønefoss", "Egersund", "Kongsvinger", "Raufoss", "Rjukan"
+    norwegian_terms = [term.lower() for term in ["Norwegian", "Norway", "Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Tromsø", "Drammen", "Fredrikstad", "Skien", "Sandnes", "Sarpsborg", "Bodø", "Ålesund", "Haugesund", "Porsgrunn", "Arendal", "Tønsberg", "Hamar", "Ytre Enebakk", "Halden", "Larvik", "Askøy", "Kongsberg", "Harstad", "Molde", "Steinkjer", "Lillehammer", "Gjøvik", "Kristiansund", "Narvik", "Horten", "Leirvik", "Mandal", "Voss", "Mo i Rana", "Namsos", "Lillestrøm", "Sandefjord", "Hønefoss", "Egersund", "Kongsvinger", "Raufoss", "Rjukan"
     ]]
 
     norwegian_word_freq = Counter()
@@ -1118,10 +1108,8 @@ def find_norwegian_terms(corpus):
 
     # Iterate over tokens and check for matches with Norwegian terms
     for word in tokens:
-        # Check for partial matches
-        for term in norwegian_terms:
-            if term.lower() in word:
-                norwegian_word_freq[term.lower()] += 1
+        if word in norwegian_terms:
+            norwegian_word_freq[word] += 1
 
     return norwegian_word_freq.most_common(5)
 
@@ -1343,7 +1331,7 @@ def find_conservation_terms(corpus):
     # Iterate over tokens and check for matches with conservation terms
     for word in tokens:
         if word in conservation_terms:
-                conservation_word_freq[word] += 1
+            conservation_word_freq[word] += 1
 
     return conservation_word_freq.most_common(5)
 
