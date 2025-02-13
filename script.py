@@ -3,7 +3,6 @@ import string
 from nltk.corpus import stopwords
 from collections import Counter
 import re
-from textblob import TextBlob
 
 # Download NLTK stopwords data
 import nltk
@@ -91,8 +90,7 @@ top_distinctive_words = word_freq.most_common(100)
 
 # === General Section ===
 
-from collections import Counter
-import re
+
 
 def find_agriculture_terms(corpus):
     # Define a list of agriculture-related terms
@@ -121,8 +119,7 @@ print("## agriculture")
 for word, count in top_agriculture_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_animal_terms(corpus):
     # Define a list of the top fifty most common Spanish animal-related terms
@@ -151,8 +148,7 @@ print("## wildlife")
 for word, count in top_animal_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_fashion_terms(corpus):
     # Define a list of fashion-related terms
@@ -181,8 +177,7 @@ print("## clothing")
 for word, count in top_fashion_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_conflict_terms(corpus):
     # Define a list of conflict-related terms
@@ -211,8 +206,7 @@ print("## conflict")
 for word, count in top_conflict_terms:
     print(f"{word}: {count}")
   
-from collections import Counter
-import re
+
 
 def find_crime_terms(corpus):
     # Define a list of the top fifty most common Spanish crime-related terms
@@ -240,8 +234,7 @@ print("## crime")
 for word, count in top_crime_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_culture_terms(corpus):
     # Define a list of culture-related terms
@@ -269,8 +262,7 @@ print("## culture")
 for word, count in top_culture_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_economic_terms(corpus):
     # Define a list of the top fifty most common Spanish economic-related terms
@@ -298,8 +290,7 @@ print("## economy")
 for word, count in top_economic_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_education_terms(corpus):
     # Define a list of the top fifty most common Spanish education-related terms
@@ -327,8 +318,7 @@ print("## education")
 for word, count in top_education_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_environment_terms(corpus):
     # Define a list of environment-related terms
@@ -356,8 +346,7 @@ print("## environment")
 for word, count in top_environment_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_family_terms(corpus):
     # Define a list of the top fifty most common Spanish family-related terms
@@ -385,8 +374,7 @@ print("## family")
 for word, count in top_family_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_food_and_drink_terms(corpus):
     # Define a list of the top fifty most common Spanish food and drink terms
@@ -414,8 +402,7 @@ print("## food and drink")
 for word, count in top_food_and_drink_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_health_terms(corpus):
     # Define a list of health-related terms
@@ -443,8 +430,7 @@ print("## health")
 for word, count in top_health_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_history_terms(corpus):
     # Define a list of history-related terms
@@ -472,8 +458,7 @@ print("## history")
 for word, count in top_history_terms:
     print(f"{word}: {count}")
     
-from collections import Counter
-import re
+
 
 def find_cinema_terms(corpus):
     # Define a list of the top fifty most common cinema-related terms
@@ -510,8 +495,7 @@ print("## cinema")
 for word, count in top_cinema_terms:
     print(f"{word}: {count}")
     
-from collections import Counter
-import re
+
 
 def find_literature_terms(corpus):
     # Define a list of the top fifty most common literature-related terms
@@ -547,8 +531,7 @@ print("## literature")
 for word, count in top_literature_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_theater_terms(corpus):
     # Define a list of the top fifty most common theater-related terms
@@ -585,8 +568,7 @@ print("## theater")
 for word, count in top_theater_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_music_terms(corpus):
     # Define a list of the top fifty most common music-related terms
@@ -625,8 +607,7 @@ for word, count in top_music_terms:
     print(f"{word}: {count}")
 
 
-from collections import Counter
-import re
+
 
 def find_indigenous_terms(corpus):
     # Define a list of indigenous-related terms specific to tribes of Idaho
@@ -654,8 +635,7 @@ print("## indigenous")
 for word, count in top_indigenous_terms:
     print(f"{word}: {count}")
     
-from collections import Counter
-import re
+
 
 def find_mining_terms(corpus):
     # Define a list of the top fifty most common mining-related terms
@@ -694,8 +674,7 @@ print("## mining")
 for word, count in top_mining_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_timber_terms(corpus):
     # Define a list of the top fifty most common timber-related terms
@@ -733,8 +712,7 @@ print("## timber")
 for word, count in top_timber_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_manufacturing_terms(corpus):
     # Define a list of the top fifty most common manufacturing-related terms
@@ -775,8 +753,7 @@ print("## manufacturing")
 for word, count in top_manufacturing_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_transportation_terms(corpus):
     # Define a list of the top fifty most common railroad and transportation-related terms
@@ -814,8 +791,7 @@ print("## railroads and transportation")
 for word, count in top_transportation_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_manual_labor_terms(corpus):
     # Define a list of the top fifty most common Spanish labor-related terms
@@ -843,8 +819,7 @@ print("## labor")
 for word, count in top_manual_labor_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_migration_terms(corpus):
     # Define a list of migration-related terms
@@ -872,8 +847,7 @@ print("## migration")
 for word, count in top_migration_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_leisure_terms(corpus):
     # Define a list of leisure-related terms
@@ -901,8 +875,7 @@ print("## recreation")
 for word, count in top_leisure_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_religion_terms(corpus):
     # Define a list of the top fifty most common Spanish religion-related terms
@@ -930,8 +903,7 @@ print("## religion")
 for word, count in top_religion_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_technology_terms(corpus):
     # Define a list of technology-related terms
@@ -961,8 +933,7 @@ for word, count in top_technology_terms:
 
 # === Geographic Section ===
 
-from collections import Counter
-import re
+
 
 def find_basque_terms(corpus):
     # Define a list of Basque-related terms
@@ -990,8 +961,7 @@ print("## basque")
 for word, count in top_basque_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_british_terms(corpus):
     british_terms = [term.lower() for term in ["British", "Britain", "London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Bristol", "Sheffield", "Newcastle", "Cardiff", "Nottingham", "Southampton", "Leicester", "Brighton", "Portsmouth", "Plymouth", "Derby", "Hull", "Middlesbrough", "Northampton", "Luton", "Wolverhampton", "Norwich", "Swansea", "Oxford", "Cambridge", "Exeter", "Yorkshire", "Cornwall", "Essex", "Surrey", "Devon", "England"
@@ -1015,8 +985,7 @@ print("## britain")
 for word, count in top_british_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_canadian_terms(corpus):
     canadian_terms = [term.lower() for term in ["Canada", "Canadian", "Toronto", "Montreal", "Vancouver", "Calgary", "Edmonton", "Ottawa", "Winnipeg", "Quebec", "Victoria", "Halifax", "Regina", "Saskatoon", "St. John's", "Kitchener", "Burnaby", "Windsor", "Richmond", "Burlington", "Surrey", "Mississauga", "Markham", "Brampton", "Vaughan", "Oakville", "Niagara Falls", "Waterloo", "Guelph", "Cambridge", "Kelowna", "Fredericton", "Charlottetown", "Whitehorse", "Yellowknife", "Iqaluit", "Ontario", "Quebec", "Nova Scotia", "New Brunswick", "Manitoba", 
@@ -1041,8 +1010,7 @@ print("## canada")
 for word, count in top_canadian_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_chinese_terms(corpus):
     chinese_terms = [term.lower() for term in ["Chinese", "China", "Beijing", "Shanghai", "Guangzhou", "Shenzhen", "Tianjin", "Chongqing", "Hangzhou", "Nanjing", "Chengdu", "Wuhan", "Xi'an", "Suzhou", "Dalian", "Qingdao", "Shenyang", "Xiamen", "Changsha", "Zhengzhou", "Dongguan", "Wuxi", "Changchun", "Ningbo", "Kunming", "Nanchang", "Hefei", "Taiyuan", "Jinan", "Guiyang", "Fuzhou", "Harbin", "Hohhot", "Ürümqi", "Lanzhou", "Yinchuan", "Lhasa", "Nanning", "Haikou", "Macau", "Hong Kong", "Taipei", "Macao", "Guilin", "Kashgar", "Shijiazhuang", "Jining" 
@@ -1067,8 +1035,7 @@ print("## china")
 for word, count in top_chinese_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_finnish_terms(corpus):
     finnish_terms = [term.lower() for term in ["Finnish", "Suomalainen", "Finland", "Suomi", "Helsinki", "Espoo", "Tampere", "Vantaa", "Oulu", "Turku", "Jyväskylä", "Kuopio", "Lahti", "Kouvola", "Pori", "Joensuu", "Lappeenranta", "Vaasa", "Hämeenlinna", "Seinäjoki", "Rovaniemi", "Mikkeli", "Kotka", "Salo", "Porvoo", "Lohja", "Hyvinkää", "Järvenpää", "Rauma", "Kokkola", "Kerava", "Kajaani", "Tuusula", "Kirkkonummi", "Seutula", "Sipoo", "Siuntio", "Karkkila", "Vihti", "Nurmijärvi", "Riihimäki", "Raseborg", "Loviisa", "Hanko", "Lohja", "Nastola", "Hollola", "Asikkala"
@@ -1092,8 +1059,7 @@ print("## finland")
 for word, count in top_finnish_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_french_terms(corpus):
     french_terms = [term.lower() for term in ["French", "France", "Marseille", "Lyon", "Toulouse", "Nantes", "Strasbourg", "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "Le Havre", "Cergy", "Saint-Étienne", "Toulon", "Angers", "Grenoble", "Dijon", "Nîmes", "Aix-en-Provence", "Saint-Quentin-en-Yvelines", "Brest", "Le Mans", "Amiens", "Limoges", "Clermont-Ferrand", "Villeurbanne", "Besançon", "Orléans", "Metz", "Rouen", "Mulhouse", "Perpignan", "Caen", "Argenteuil", "Saint-Denis", "Roubaix", "Tourcoing", "Avignon", "Poitiers", "Créteil", "Nanterre", "Versailles"
@@ -1117,8 +1083,7 @@ print("## france")
 for word, count in top_french_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_german_terms(corpus):
     german_terms = [term.lower() for term in ["German", "Germany", "Berlin", "Hamburg", "Munich", "Cologne", "Frankfurt", "Stuttgart", "Düsseldorf", "Dortmund", "Essen", "Leipzig", "Bremen", "Dresden", "Hanover", "Nuremberg", "Duisburg", "Bochum", "Wuppertal", "Bielefeld", "Bonn", "Münster", "Karlsruhe", "Mannheim", "Augsburg", "Wiesbaden", "Gelsenkirchen", "Mönchengladbach", "Braunschweig", "Chemnitz", "Kiel", "Aachen", "Halle", "Magdeburg", "Freiburg", "Krefeld", "Lübeck", "Oberhausen", "Erfurt", "Mainz", "Rostock", "Kassel", "Hagen", "Saarbrücken", "Hamm", "Potsdam", "Leverkusen", "Oldenburg"
@@ -1142,8 +1107,7 @@ print("## germany")
 for word, count in top_german_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_greek_terms(corpus):
     greek_terms = [term.lower() for term in ["Greek", "Greece", "Athens", "Thessaloniki", "Patras", "Heraklion", "Larissa", "Volos", "Ioannina", "Chania", "Chalcis", "Rethymno", "Serres", "Kavala", "Komotini", "Alexandroupoli", "Katerini", "Veria", "Trikala", "Lamia", "Kozani", "Polichni", "Karditsa", "Sykies", "Nea Ionia", "Ioannis", "Agia Paraskevi", "Palaio Faliro", "Tripoli", "Galatsi", "Agrinio", "Chios", "Mytilene", "Kalamata", "Kavala", "Volos", "Larissa", "Heraklion", "Chalkida", "Thiva", "Sparta", "Corfu", "Lamia", "Karditsa", "Kastoria", "Kavala"
@@ -1167,8 +1131,7 @@ print("## greece")
 for word, count in top_greek_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_geographic_words(corpus):
     # Define a list of geographic place names in Idaho (converted to lowercase for easier matching)
@@ -1212,8 +1175,7 @@ print("## idaho")
 for word, count in top_geographic_words:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_indian_terms(corpus):
     indian_terms = [term.lower() for term in [
@@ -1245,8 +1207,7 @@ print("## india")
 for word, count in top_indian_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_irish_terms(corpus):
     irish_terms = [term.lower() for term in ["Irish", "Ireland", "Dublin", "Galway", "Limerick", "Waterford", "Drogheda", "Dundalk", "Bray", "Navan", "Kilkenny", "Ennis", "Carlow", "Tralee", "Newbridge", "Portlaoise", "Balbriggan", "Naas", "Athlone", "Mullingar", "Celbridge", "Wexford", "Letterkenny", "Sligo", "Clonmel", "Greystones", "Malahide", "Carrigaline", "Leixlip", "Lucan", "Skerries", "Tramore", "Killarney", "Arklow", "Kilcock", "Ballina", "Castlebar", "Maynooth", "Thurles", "Monaghan", "Mallow", "Portarlington", "Buncrana", "Gorey", "Tuam", "Cobh", "potato famine"
@@ -1270,8 +1231,7 @@ print("## ireland")
 for word, count in top_irish_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_italian_terms(corpus):
     italian_terms = [term.lower() for term in ["Italian", "Italy", "Rome", "Milan", "Naples", "Turin", "Palermo", "Genoa", "Bologna", "Florence", "Bari", "Catania", "Venice", "Verona", "Messina", "Padua", "Trieste", "Taranto", "Brescia", "Prato", "Reggio", "Modena", "Reggio", "Emilia", "Perugia", "Livorno", "Ravenna", "Cagliari", "Foggia", "Rimini", "Salerno", "Ferrara", "Sassari", "Latina", "Giugliano", "Monza", "Syracuse", "Bergamo", "Pescara", "Trento", "Forlì", "Vicenza", "Terni", "Bolzano", "Novara", "Piacenza", "Ancona", "Andria", "Udine"
@@ -1295,8 +1255,7 @@ print("## italy")
 for word, count in top_italian_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_japanese_terms(corpus):
     japanese_terms = [term.lower() for term in ["Japanese", "Japan", "Tokyo", "Yokohama", "Osaka", "Nagoya", "Sapporo", "Fukuoka", "Kobe", "Kyoto", "Kawasaki", "Saitama", "Hiroshima", "Sendai", "Kitakyushu", "Chiba", "Sakai", "Niigata", "Hamamatsu", "Okayama", "Kumamoto", "Sagamihara", "Kagoshima", "Matsumoto", "Kanazawa", "Naha", "Matsuyama", "Kōchi", "Naha", "Nagasaki", "Toyama", "Otsu", "Wakayama", "Akita", "Aomori", "Asahikawa", "Fukushima", "Fukui", "Gifu", "Hachinohe", "Hakodate", "Higashiosaka", "Himeji", "Iwaki", "Iwakuni", "Kōfu", "Kure"
@@ -1322,8 +1281,7 @@ print("## japan")
 for word, count in top_japanese_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_mexican_terms(corpus):
     mexican_terms = [term.lower() for term in ["Mexico", "Mexican", "Mexico City", "Guadalajara", "Monterrey", "Puebla", "Tijuana", "León", "Ciudad Juárez", "Chihuahua", "Cancún", "Mérida", "Aguascalientes", "Querétaro", "Toluca", "Hermosillo", "San Luis Potosí", "Culiacán", "Acapulco", "Morelia", "Saltillo", "Veracruz", "Villahermosa", "Tuxtla Gutiérrez", "Durango", "Tepic", "Colima", "Campeche", "La Paz", "Torreón", "Mazatlán", "Reynosa", "Matamoros", "Celaya", "Irapuato", "Nuevo Laredo", "Ensenada", "Coatzacoalcos", "Oaxaca", "Tlalnepantla", "Tampico", "Cuernavaca", "Zacatecas", "Uruapan", "Nogales", "Pachuca", "Cuautitlán", "Tapachula", "Delicias"
@@ -1349,8 +1307,7 @@ print("## mexico")
 for word, count in top_mexican_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_norwegian_terms(corpus):
     norwegian_terms = [term.lower() for term in ["Norwegian", "Norway", "Oslo", "Bergen", "Trondheim", "Stavanger", "Kristiansand", "Tromsø", "Drammen", "Fredrikstad", "Skien", "Sandnes", "Sarpsborg", "Bodø", "Ålesund", "Haugesund", "Porsgrunn", "Arendal", "Tønsberg", "Hamar", "Ytre Enebakk", "Halden", "Larvik", "Askøy", "Kongsberg", "Harstad", "Molde", "Steinkjer", "Lillehammer", "Gjøvik", "Kristiansund", "Narvik", "Horten", "Leirvik", "Mandal", "Voss", "Mo i Rana", "Namsos", "Lillestrøm", "Sandefjord", "Hønefoss", "Egersund", "Kongsvinger", "Raufoss", "Rjukan"
@@ -1374,8 +1331,7 @@ print("## norway")
 for word, count in top_norwegian_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_philippine_terms(corpus):
     philippine_terms = [term.lower() for term in ["Philippines", "Filipino", "Tagalog", "Manila", "Quezon City", "Davao City", "Caloocan", "Cebu City", "Zamboanga City", "Antipolo", "Pasig", "Taguig", "Cagayan de Oro", "Parañaque", "Valenzuela", "Las Piñas", "Makati", "Bacolod", "Muntinlupa", "Iloilo City", "Tarlac City", "Baguio", "Batangas City", "General Santos", "Lapu-Lapu", "Iligan", "Olongapo", "Binan", "Santa Rosa", "Tagum", "Tacloban", "Malolos", "Navotas", "Dagupan", "Toledo", "Lucena", "San Fernando", "Cabanatuan", "Ormoc", "Dasmariñas", "San Juan", "Baliuag", "Tuguegarao", "Malabon", "Mabalacat", "Cotabato City", "Puerto Princesa", "Butuan"
@@ -1401,8 +1357,7 @@ print("## philippines")
 for word, count in top_philippine_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_polish_terms(corpus):
     polish_terms = [term.lower() for term in ["Poland", "Warsaw", "Kraków", "Łódź", "Wrocław", "Poznań", "Gdańsk", "Szczecin", "Bydgoszcz", "Lublin", "Białystok", "Katowice", "Gdynia", "Częstochowa", "Radom", "Sosnowiec", "Toruń", "Kielce", "Rzeszów", "Gliwice", "Zabrze", "Olsztyn", "Bielsko-Biała", "Bytom", "Zielona Góra", "Rybnik", "Tarnów", "Opole", "Gorzów", "Dąbrowa", "Górnictwo", "Elbląg", "Płock", "Wałbrzych", "Chorzów", "Tychy", "Jaworzno", "Jastrzębie", "Zdrój", "Mysłowice", "Legnica", "Lubin", "Siedlce", "Inowrocław", "Piotrków", "Trybunalski", "Ostrołęka"
@@ -1426,8 +1381,7 @@ print("## poland")
 for word, count in top_polish_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_portuguese_terms(corpus):
     portuguese_terms = [term.lower() for term in [
@@ -1459,8 +1413,7 @@ print("## portugal")
 for word, count in top_portuguese_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_scottish_terms(corpus):
     scottish_terms = [term.lower() for term in ["Scottish", "Scotland", "Edinburgh", "Glasgow", "Aberdeen", "Dundee", "Inverness", "Stirling", "Perth", "Fife", "Falkirk", "Ayr", "East Kilbride", "Livingston", "Cumbernauld", "Kilmarnock", "Greenock", "Coatbridge", "Glenrothes", "Airdrie", "Kirkcaldy", "Dunfermline", "Dumfries", "Motherwell", "Paisley", "Renfrew", "Irvine", "Giffnock", "Newton Mearns", "Cambuslang", "Barrhead", "Blantyre", "Stranraer", "Bellshill", "Kirkintilloch", "Wishaw", "Nairn", "Buckie", "Portree", "Inverurie", "Alloa", "Bathgate", "Dingwall", "Elgin", "Fort William", "Hawick", "Jedburgh"
@@ -1484,8 +1437,7 @@ print("## scotland")
 for word, count in top_scottish_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_spanish_terms(corpus):
     spanish_terms = [term.lower() for term in ["Spanish", "Spain", "Madrid", "Barcelona", "Valencia", "Seville", "Zaragoza", "Málaga", "Murcia", "Palma", "Las Palmas", "Bilbao", "Alicante", "Córdoba", "Valladolid", "Vigo", "Gijón", "L'Hospitalet", "A Coruña", "Vitoria", "Granada", "Elche", "Oviedo", "Badalona", "Terrassa", "Cartagena", "Sabadell", "Jerez", "Móstoles", "Santa Cruz", "Alcalá", "Fuenlabrada", "Almería", "Leganés", "San Sebastián", "Getafe", "Burgos", "Albacete", "Santander", "Castellón", "Logroño", "Badajoz", "Huelva", "Salamanca", "Lérida", "Tarragona", "León"
@@ -1509,8 +1461,7 @@ print("## spain")
 for word, count in top_spanish_terms:
     print(f"{word}: {count}")
 
-from collections import Counter
-import re
+
 
 def find_swedish_terms(corpus):
     swedish_terms = [term.lower() for term in ["Swedish", "Swede", "Swedes", "Scandinavian", "Stockholm", "Sweden", "Gothenburg", "Malmö", "Uppsala", "Linköping", "Norrköping", "Örebro", "Västerås", "Helsingborg", "Jönköping", "Umeå", "Lund", "Borås", "Sundsvall", "Gävle", "Östersund", "Eskilstuna", "Södertälje", "Halmstad", "Växjö", "Karlstad", "Trollhättan", "Örnsköldsvik", "Kalmar", "Kristianstad", "Falun", "Borlänge", "Skövde", "Karlskrona", "Visby", "Luleå", "Märsta", "Alingsås", "Östersund", "Vänersborg", "Täby", "Hässleholm", "Trelleborg", "Nyköping", "Piteå", "Lidingö"
@@ -1537,8 +1488,7 @@ for word, count in top_swedish_terms:
 # === Custom Section ===
 
 
-from collections import Counter
-import re
+
 
 def find_reproductive_rights_terms(corpus):
     reproductive_rights_terms = [term.lower() for term in ["abortion", "contraception", "birth control", "family planning", "reproductive health", "reproductivity", "sterilization", "IVF", "in vitro fertilization", "pregnancy", "miscarriage", "stillbirth", "menstruation", "menstrual health", "menses", "ovulation", "ovarian", "uterus", "womb", "fertility treatment", "assisted reproduction", "egg donation", "sperm donation", "surrogacy", "adoption", "parental leave", "maternity leave", "paternity leave", "reproductive rights", "reproductive justice", "sexual health", "sexual education", "family planning clinic", "Planned Parenthood", "morning-after pill", "RU-486", "emergency contraception", "IUD", "implant", "tubal ligation", "vasectomy", "condom", "diaphragm", "cervical cap", "birth spacing", "reproductive freedom", "pro-choice", "pro-life", "reproductive autonomy"

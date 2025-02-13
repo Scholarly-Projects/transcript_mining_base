@@ -32,12 +32,7 @@ myenv\Scripts\activate
 ## Installing Dependencies
 Once the virtual environment is activated, install the required Python packages by running:
 ```sh
-pip install pandas nltk textblob
-```
-
-Additionally, download the necessary NLTK stopwords dataset:
-```sh
-python -c "import nltk; nltk.download('stopwords')"
+pip install pandas nltk
 ```
 
 ---
