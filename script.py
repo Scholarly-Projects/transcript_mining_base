@@ -11,7 +11,6 @@ nltk.download('stopwords')
 # Define preprocess_text function
 def preprocess_text(text):
     if isinstance(text, str):  # Check if text is a string
-        text = re.sub(r'\b\w{1,4}\b', '', text)  # Remove short words (length <= 4)
         text = text.translate(str.maketrans('', '', string.punctuation)) 
         text = text.lower()  # Convert text to lowercase
     else:
