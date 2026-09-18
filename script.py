@@ -60,7 +60,7 @@ TAGS = {
         ],
     },
     "animal": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "moose", "ewe", "horse", "salmon hatchery", "goat", "pig",
             "chicken", "turkey", "duck", "quail", "rabbit", "squirrel",
@@ -74,7 +74,7 @@ TAGS = {
             "hawks", "steelhead",
         ],
     },
-    "fashion": {
+    "clothing": {
         "enabled": True,
         "terms": [
             "clothing", "fashion", "apparel", "outfit", "wardrobe", "jeans",
@@ -94,7 +94,7 @@ TAGS = {
             "drugs", "trafficking", "possession", "distribution", "addiction",
             "prostitution", "gambling", "corruption", "bribery", "fraud",
             "embezzlement", "extortion", "racketeering", "money laundering",
-            "forgery", "identity theft", "cybercrime", "vandalism", "arson",
+            "forgery", "identity theft", "vandalism", "arson",
             "illegal immigration", "detention", "arrest", "interrogation",
             "trial", "plea bargain", "conviction", "sentencing",
             "imprisonment", "probation", "parole", "rehabilitation",
@@ -110,7 +110,7 @@ TAGS = {
             "gathering", "gatherings", "socializing", "folktales", "legends",
             "crafts", "craftsmanship", "oral tradition", "ethnicity",
             "diversity", "inclusion", "community centers", "street fairs",
-            "parades", "food trucks", "ethnic foods", "local traditions",
+            "parades", "local traditions",
             "folk dance", "folk art", "cultural exchange",
             "cultural identity", "cultural pride", "multiculturalism",
             "ethnic neighborhoods",
@@ -151,7 +151,7 @@ TAGS = {
     "environment": {
         "enabled": True,
         "terms": [
-            "environment", "nature", "ecology", "ecosystem", "biodiversity",
+            "nature", "ecology", "ecosystem", "biodiversity",
             "conservation", "sustainability", "climate", "climate change",
             "global warming", "pollution", "air pollution", "water pollution",
             "soil pollution", "deforestation", "habitat destruction",
@@ -189,18 +189,21 @@ TAGS = {
         ],
     },
     "food_and_drink": {
-        "enabled": True,
-        "terms": [
-            "beans", "beef", "pork", "chicken", "milk", "bread", "butter",
-            "eggs", "cheese", "apple", "pie", "peach", "biscuit", "coffee",
-            "tea", "beer", "whiskey", "soda", "soup", "stew", "salad", "corn",
-            "wheat", "barley", "oats", "onion", "garlic", "salt", "pepper",
-            "lard", "marmalade", "honey", "cider", "vinegar", "bacon",
-            "sausage", "jerky", "pickles", "fruit spread", "cake", "cookies",
-            "doughnuts", "ice cream", "candy", "chocolate", "almonds",
-            "raisins",
-        ],
-    },
+            "enabled": True,
+            "terms": [
+                "beef", "pork", "chicken", "milk", "bread", "butter", "eggs",
+                "cheese", "pie", "biscuit", "coffee", "tea", "beer", "whiskey",
+                "soda", "soup", "stew", "salad", "salt", "pepper", "lard",
+                "marmalade", "cider", "vinegar", "bacon", "sausage", "jerky",
+                "pickles", "fruit spread", "cake", "cookies", "doughnuts",
+                "ice cream", "candy", "chocolate", "raisins", "ham", "mutton",
+                "venison", "elk", "salmon", "trout", "rabbit", "salt pork",
+                "sourdough", "cornbread", "flapjacks", "hardtack", "mush",
+                "molasses", "sorghum", "jam", "jelly", "applesauce", "baked beans",
+                "buttermilk", "sarsaparilla", "root beer", "moonshine",
+                "huckleberries",
+            ],
+        },
     "health": {
         "enabled": True,
         "terms": [
@@ -296,7 +299,7 @@ TAGS = {
         ],
     },
     "indigenous": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "shoshone", "tribe", "reservation", "native american",
             "indigenous", "bannock", "nez perce", "coeur d'alene indian",
@@ -315,7 +318,7 @@ TAGS = {
         ],
     },
     "mining": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "mining", "ore", "extraction", "prospecting", "drilling",
             "blasting", "excavation", "fracking", "hydraulic fracturing",
@@ -335,7 +338,7 @@ TAGS = {
         ],
     },
     "timber": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "timber", "lumber", "logging", "forestry", "sawing", "felling",
             "deforestation", "reforestation", "sawmill", "plywood",
@@ -428,7 +431,7 @@ TAGS = {
         "terms": [
             "ski", "leisure", "recreation", "entertainment", "activity",
             "hobby", "pastime", "sports", "game", "fun", "relaxation",
-            "adventure", "park", "picnic", "barbecue", "camp", "hike",
+            "adventure", "picnic", "barbecue", "camp", "hike",
             "trail", "fishing", "hunting", "camping", "bonfire", "campfire",
             "swimming", "pool", "beach", "lake", "boating", "canoeing",
             "kayaking", "biking", "cycling", "walking", "running", "hiking",
@@ -438,7 +441,7 @@ TAGS = {
     "religion": {
         "enabled": True,
         "terms": [
-            "church", "temple", "mosque", "synagogue", "prayer", "worship",
+            "religious", "church", "temple", "mosque", "synagogue", "prayer", "worship",
             "faith", "creed", "spirituality", "religious", "devotion",
             "ritual", "ceremony", "sacred", "holy", "blessing", "preacher",
             "minister", "priest", "pastor", "deacon", "congregation",
@@ -460,10 +463,10 @@ TAGS = {
             "word processor", "spreadsheet", "modem", "printer", "scanner",
             "fax machine", "vhs", "cassette", "walkman", "tape recorder",
             "cd player", "compact disc", "video game", "atari", "nintendo",
-            "gameboy", "sega", "playstation", "xbox", "calculator",
+            "sega", "playstation", "xbox", "calculator",
             "typewriter", "telephone", "answering machine", "pager",
             "television", "vcr", "remote control", "antenna", "cable",
-            "satellite", "video cassette", "walkie-talkie", "walkie", "radio",
+            "satellite", "video cassette", "walkie-talkie", "radio",
             "cassette player", "boombox", "turntable", "vinyl record",
             "record player", "camera", "polaroid", "celluloid", "flashlight",
             "timepiece", "wristwatch", "microwave", "toaster", "blender",
@@ -475,7 +478,7 @@ TAGS = {
     "basque": {
         "enabled": True,
         "terms": [
-            "basque", "basque country", "euskadi", "euskara", "donostia",
+            "basque", "euskadi", "euskara", "donostia",
             "bilbao", "vitoria-gasteiz", "iruña", "hondarribia", "zarautz",
             "getaria", "biarritz", "bayonne", "saint-jean-de-luz", "guernica",
             "bermeo", "mutriku", "ondarroa", "mundaka", "lekeitio", "orio",
@@ -513,7 +516,7 @@ TAGS = {
         ],
     },
     "chinese": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "chinese", "china", "beijing", "shanghai", "guangzhou",
             "shenzhen", "tianjin", "chongqing", "hangzhou", "nanjing",
@@ -555,7 +558,7 @@ TAGS = {
         ],
     },
     "german": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "german", "germany", "berlin", "hamburg", "munich", "cologne",
             "frankfurt", "stuttgart", "düsseldorf", "dortmund", "essen",
@@ -582,7 +585,7 @@ TAGS = {
         ],
     },
     "geographic": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "caldwell", "idaho falls", "pocatello", "rupert", "boise",
             "nampa", "emmett", "twin falls", "burley", "moscow", "lewiston",
@@ -619,10 +622,10 @@ TAGS = {
             "white bird", "wilder", "winchester", "worley",
         ],
     },
-    "indian": {
+    "south asian": {
         "enabled": True,
         "terms": [
-            "indian", "india", "hindi", "new delhi", "mumbai", "bangalore",
+            "indian", "india", "hindi", "Hindustanee", "Hindoo", "new delhi", "mumbai", "bangalore",
             "chennai", "kolkata", "hyderabad", "pune", "ahmedabad", "surat",
             "jaipur", "kanpur", "lucknow", "nagpur", "patna", "indore",
             "thane", "bhopal", "visakhapatnam", "vadodara", "firozabad",
@@ -776,7 +779,7 @@ TAGS = {
         ],
     },
     "swedish": {
-        "enabled": True,
+        "enabled": False,
         "terms": [
             "swedish", "swede", "swedes", "scandinavian", "stockholm",
             "sweden", "gothenburg", "malmö", "uppsala", "linköping",
@@ -789,7 +792,7 @@ TAGS = {
             "nyköping", "piteå", "lidingö",
         ],
     },
-    "reproductive_rights": {
+    "reproductive_health": {
         "enabled": True,
         "terms": [
             "abortion", "contraception", "birth control", "family planning",
@@ -822,53 +825,193 @@ TAGS = {
         ],
     },
     "LCOH Flora & Fauna": {
+            "enabled": True,
+            "terms": [
+                "Appaloosa", "Badger", "Bear Den", "Beaver", "Belgian horse", "Bison",
+                "Bitterroot", "Blister Rust", "Bluebird", "Buck", "Buffalo",
+                "Bunchgrass", "Camas", "Catface", "Cayuse", "Chicken", "Chipmunk",
+                "Chokecherry", "Clydesdale", "Cougars", "Cous", "Coyote", "Crow",
+                "Doe", "Duck", "Eagle", "Ewe", "Ferret", "Finch", "Fox", "Frog",
+                "Gaggle", "Goat", "Gopher", "Hawk", "Hawks", "Herd", "Herefords",
+                "Horse", "Huckleberry", "Kinnikinnick", "Lamb", "Lizard", "Marmot",
+                "Mink", "Moose", "Morgan", "Mountain Lions", "Muskrat", "Newt",
+                "Otter", "Owl", "Paw", "Percherons", "Pig", "Ponderosa Pine",
+                "Possum", "Prairie Dog", "Quail", "Quarter Horse", "Rabbit",
+                "Raccoon", "Raven", "Ribes", "Sagebrush", "Salamander",
+                "Salmon Hatchery", "Sarvisberry", "Shadbush", "Shire", "Skunk",
+                "Smudge Fire", "Snake Bite", "Sparrow", "Squirrel", "Stag",
+                "Steelhead", "Syringa", "Tamarack", "Toad", "Turkey", "Weasel",
+                "Whale Pod", "Wolf Pack", "Wolves", "Yampa",
+            ],
+        },
+    "LCOH Chinese": {
+            "enabled": True,
+            "terms": [
+                "Beijing", "Bing Kong Tong", "Changchun", "Changsha", "Chengdu",
+                "China", "Chinese", "Chongqing", "Dalian", "Dongguan", "Fuzhou",
+                "Guangzhou", "Guilin", "Guiyang", "Haikou", "Hangzhou", "Harbin",
+                "Hefei", "Hip Sing Tong", "Hohhot", "Hong Kong", "Jinan", "Jining",
+                "Kashgar", "Kunming", "Lanzhou", "Lhasa", "Macao", "Macau",
+                "Nanchang", "Nanjing", "Nanning", "Ningbo", "Qingdao", "Shanghai",
+                "Shenyang", "Shenzhen", "Shijiazhuang", "Suzhou", "Taipei",
+                "Taiyuan", "Tianjin", "Wuhan", "Wuxi", "Xi'an", "Xiamen",
+                "Yinchuan", "Zhengzhou", "Ürümqi",
+            ],
+        },
+    "LCOH Eastern European": {
         "enabled": True,
         "terms": [
-            "Appaloosa", "Blister Rust", "Camas", "Catface", "Cayuse", "Cous",
-            "Herefords", "Percherons", "Ribes", "Sarvisberry", "Shadbush",
-            "Smudge Fire",
+            "Austrian", "Bohemian", "Bohunk", "Bull Hunk", "Croat", "Czech",
+            "Hungarian", "Hunk", "Hunkie", "Hunky", "Polack", "Pole", "Polish",
+            "Rooshian", "Russian", "Ruthenian", "Serbian", "Slav", "Slavic",
+            "Slavonian", "Slovack", "Slovak",
         ],
     },
-    "LCOH Food": {
+    "LCOH German": {
         "enabled": True,
         "terms": [
-            "Fattigmann", "Ostkaka",
+            "Aachen", "Augsburg", "Berlin", "Bielefeld", "Bochum", "Bonn",
+            "Braunschweig", "Bremen", "Chemnitz", "Cologne", "Dortmund",
+            "Dresden", "Duisburg", "Düsseldorf", "Erfurt", "Essen",
+            "Frankfurt", "Freiburg", "Gelsenkirchen", "German", "Germany",
+            "Hagen", "Halle", "Hamburg", "Hamm", "Hanover", "Karlsruhe",
+            "Kassel", "Kiel", "Krefeld", "Leipzig", "Leverkusen", "Lübeck",
+            "Magdeburg", "Mainz", "Mannheim", "Munich", "Mönchengladbach",
+            "Münster", "Nuremberg", "Oberhausen", "Oldenburg", "Plautdietsch",
+            "Potsdam", "Rostock", "Saarbrücken", "Stuttgart", "Wiesbaden",
+            "Wuppertal",
         ],
     },
-    "LCOH Labor Designations": {
+    "LCOH Indigenous": {
         "enabled": True,
         "terms": [
-            "Bullgang", "Cat Skinner", "Check-Scaler", "Choke-Setter",
-            "Cruiser", "Timber Cruiser", "Derrick Team", "Dogging",
-            "Dray Logging", "Draymen", "Edgeman", "Flunkeying", "Flunkies",
-            "Flying squad", "Go-devil", "Gyppoing", "Hooker", "Highline Man",
-            "Jigger", "Jumbo", "Jungle", "Jungling-Up", "Marions", "Oilers",
-            "Pirating", "Pond Duck", "Powder Men", "Roughlock", "Roustabout",
-            "Sack Sewer", "Shockers", "Swamping", "Thrashing Crews",
-            "Walking Boss", "Undercutter",
+            "Atsina", "Bannock", "Blackfeet", "Bruneau Indian", "Burns Paiute",
+            "Camas Prairie", "Cayuse Indian", "Chehalis Indian",
+            "Chelan Indian", "Chinook Indian", "Clatsop", "Clearwater Indian",
+            "Coast Salish", "Coeur d'Alene Indian", "Columbia Indian",
+            "Colville Indian", "Coos", "Coquille", "Cowlitz", "Duwamish",
+            "Entiat Indian", "Flathead", "Fort Hall Indian", "Grand Ronde",
+            "Hoh", "Indigenous", "Interior Salish", "Kalispel Indian",
+            "Klamath Indian", "Klickitat", "Kootenai", "Lemhi",
+            "Lemhi River Indian", "Lummi", "Makah", "Methow", "Modoc",
+            "Molalla", "Native American", "Nez Perce", "Nez Percé", "Nimíipuu",
+            "Nisqually", "Nooksack", "Northern Paiute", "Okanagan Indian",
+            "Owyhee", "Palus", "Payette Indian", "Pend d'Oreille", "Puyallup",
+            "Quileute", "Quinault", "Reservation", "Sahaptin", "Salish",
+            "Salmon River Indian", "Samish", "San Poil", "Sheepeater",
+            "Shoshone", "Shoshone-Bannock", "Shoshone-Paiute", "Shoshoni",
+            "Siletz", "Sinixt", "Sinkiuse-Columbia", "Skagit", "Skokomish",
+            "Skookum", "Snake River Indian", "Snoqualmie Indian",
+            "Spokane Indian", "Squaxin Island", "Stillaguamish", "Suquamish",
+            "Swinomish", "Tenino Indian", "Tillamook", "Tribe", "Tukudeka",
+            "Tulalip", "Umatilla Indian", "Umpqua", "Walla Walla Indian",
+            "Wanapum", "Warm Springs Indian", "Wasco Indian",
+            "Wenatchee Indian", "Wenatchi", "Western Shoshone",
+            "Willamette Valley Indian", "Yakama Indian",
         ],
     },
-    "LCOH Lingual / Folklore": {
+    "LCOH Romani": {
         "enabled": True,
         "terms": [
-            "Bing Kong Tong", "Bohunk", "Hunk", "The Bull of the Woods",
-            "grade", "Gypsies", "Romani", "Hip Sing Tong", "Owling", "Nisse",
-            "Plautdietsch", "Skookum",
+            "Gipsy", "Gypsies", "Gypsy", "Roma", "Romani", "Romany", "Vardo",
+        ],
+    },
+    "LCOH Swedish": {
+        "enabled": True,
+        "terms": [
+            "Alingsås", "Borlänge", "Borås", "Eskilstuna", "Falun",
+            "Fattigmann", "Gothenburg", "Gävle", "Halmstad", "Helsingborg",
+            "Hässleholm", "Jönköping", "Kalmar", "Karlskrona", "Karlstad",
+            "Kristianstad", "Lidingö", "Linköping", "Luleå", "Lund", "Malmö",
+            "Märsta", "Norrköping", "Nyköping", "Ostkaka", "Piteå",
+            "Scandinavian", "Skövde", "Stockholm", "Sundsvall", "Swede",
+            "Sweden", "Swedes", "Swedish", "Södertälje", "Trelleborg",
+            "Trollhättan", "Täby", "Umeå", "Uppsala", "Visby", "Vänersborg",
+            "Västerås", "Växjö", "Örebro", "Örnsköldsvik", "Östersund",
+        ],
+    },
+    "LCOH Mining": {
+            "enabled": True,
+            "terms": [
+                "Assay", "Blasting", "Coal Seam", "Conveyor Belt", "Dredging",
+                "Drift Mining", "Drilling", "Environmental Impact", "Excavation",
+                "Explosive Charge", "Extraction", "Extraction Rate",
+                "Flotation Process", "Fracking", "Geological Survey",
+                "Geotechnical Analysis", "Hard Rock Mining", "Haul Truck",
+                "Heap Leaching", "Hydraulic Fracturing", "Hydrometallurgy",
+                "Jigger", "Jumbo", "Longwall Mining", "Marions", "Mine Closure",
+                "Mine Drainage", "Mine Reclamation", "Mine Safety",
+                "Mine Ventilation", "Miner's Lamp", "Mineral Deposit", "Mining",
+                "Mining Permit", "Oilers", "Open Pit", "Ore", "Ore Body",
+                "Ore Grade", "Placer Mining", "Powder Men", "Processing Plant",
+                "Prospecting", "Pyrometallurgy", "Quarrying", "Reclamation Bond",
+                "Refining", "Rock Fragmentation", "Room and Pillar", "Roustabout",
+                "Shaft Sinking", "Slope Mining", "Slurry", "Smelting",
+                "Strip Mining", "Strip Ratio", "Tailings", "Tunneling",
+                "Underground Mining", "Walking Boss",
+            ],
+    },
+    "LCOH Thrashing": {
+            "enabled": True,
+            "terms": [
+                "Band Cutter", "Belt Pulley", "Binder", "Blower", "Bundle",
+                "Bundle Pitcher", "Bundle Wagon", "Bundling", "Chaff",
+                "Combine Harvester", "Cook Car", "Cook Shack", "Custom Thresher",
+                "Engineer", "Feeder", "Fireman", "Grain Harvest", "Grain Sack",
+                "Grain Wagon", "Harvest Crew", "Header", "Header Box",
+                "Header Puncher", "Sack Sewer", "Self-Feeder", "Separator",
+                "Separator Man", "Sheaf", "Sheaves", "Shock", "Shockers",
+                "Shocking", "Spike Pitcher", "Stacker", "Steam Engine", "Stook",
+                "Straw Stack", "Thrasher", "Thrashing Crews", "Threshing",
+                "Threshing Machine", "Threshing Run", "Traction Engine", "Twine",
+                "Water Boy", "Water Wagon", "Weigher", "Wheat Harvest",
+            ],
+    },
+    "LCOH Timber": {
+        "enabled": True,
+        "terms": [
+            "Jungle", "Jungling-Up", "Air Drying", "Bateau", "Beam", "Board Foot", "Boom", "Boom Stick",
+            "Buffer Strip", "Bullgang", "Cant Hook", "Cat Skinner", "Chainsaw",
+            "Check-Scaler", "Chipboard", "Choke-Setter", "Clear Cutting",
+            "Crawler", "Crosscut", "Cruiser", "Debarking", "Deforestation",
+            "Derrick Team", "Dogging", "Dray Logging", "Draymen",
+            "Driving Crew", "Edgeman", "Felling", "Flume", "Flunkeying",
+            "Flunkies", "Flying squad", "Forest Conservation", "Forestry",
+            "Go-devil", "Gyppoing", "Hardwood", "Hectare Yield",
+            "Highline Man", "Hooker", "Jammer", "Kiln Drying", "Lath",
+            "Log Chute", "Log Jam", "Log Scaler", "Log Yard", "Logging",
+            "Logging Permit", "Lumber", "Lumber Grading", "Milling Process",
+            "NACCCA",
+            "North American Civilian Conservation Corps Alumni Association",
+            "Peavey", "Pirating", "Plank", "Plywood", "Pond Duck", "Pulpwood",
+            "Reforestation", "Rip Cut", "Rollway", "Roughlock", "Sawing",
+            "Sawmill", "Selective Cutting", "Silviculture", "Skidder",
+            "Softwood", "Sorting Boom", "Sorting Gaps", "Splash Dam",
+            "Streamside", "Stumpage", "Sustainable Forestry", "Swamping",
+            "Timber", "Timber Cruiser", "Timber Frame", "Timber Stand",
+            "Timberland", "Tree Farm", "Tree Felling", "Undercutter", "Veneer",
+            "Wood Grain", "Wood Preservation", "Wood Processing",
+            "Wood Treatment", "Woodlot", "Woodworker",
         ],
     },
     "LCOH Organizations": {
-        "enabled": True,
-        "terms": [
-            "Coxey's Army", "Foster School of Healing",
-            "Grand Army of the Republic", "GAR", "Hayu Club", "IERA",
-            "Idaho Emergency Relief Administration", "Kiwanis Club",
-            "Knights of Pythias", "Ku Klux Klan", "Ladies' Auxiliaries",
-            "Maccabee Lodge", "Pioneer Club", "Psychiana", "Odd Fellows Hall",
-            "QAE Club", "Rebekah Lodge", "Runt Club Skating Party",
-            "Soroptimist Club", "WCTU", "Women's Christian Temperance Union",
-            "Women of the Woodcraft", "Woodman of the World",
-        ],
-    },
+            "enabled": True,
+            "terms": [
+                "Coxey's Army", "Coxeyites", "Daughters of Rebekah",
+                "Emergency Relief Administration", "Foster School of Healing",
+                "GAR", "Grand Army of the Republic", "Hayu Club",
+                "Idaho Emergency Relief Administration", "IERA",
+                "Independent Order of Odd Fellows", "Odd Fellows", "IOOF", "K of P", "Kiwanis",
+                "Kiwanis Club", "KKK", "Klan", "Knights of Pythias",
+                "Knights of the Maccabees", "Ku Klux Klan", "Ladies Aid",
+                "Ladies Auxiliary", "Ladies' Auxiliaries", "Maccabee Lodge",
+                "Maccabees", "Odd Fellows Hall", "Pioneer Club", "Psychiana",
+                "QAE Club", "Rebekah Lodge", "Rebekahs", "Runt Club Skating Party",
+                "Soroptimist Club", "Soroptimists", "WCTU",
+                "Women of the Woodcraft", "Women's Christian Temperance Union",
+                "Woodman of the World", "Woodmen of the World", "WOW",
+            ],
+        },
     "LCOH People": {
         "enabled": True,
         "terms": [
@@ -900,65 +1043,91 @@ TAGS = {
             "Big Gil Pippen", "Joe Rivers", "Jacob Rosenstein",
             "Sam Samovich", "Sells-Floto Circus", "Shefflins", "Shivaree",
             "Whitliff R. Smith", "Jackson Sundance", "Frank Tom",
-            "Shorty Trimble", "Me Too", "Ollie Vincent", "John P. Vollmer",
+            "Shorty Trimble", "Ollie Vincent", "John P. Vollmer",
             "J.P. Wahlberg", "Red Watson", "Joe Wells", "Milford Welch",
             "Wild Davey", "Friedrich Weyerhaeuser", "Doc White",
             "M.F. Zumhof",
         ],
     },
-    "LCOH Places": {
+   "LCOH Places": {
         "enabled": True,
         "terms": [
-            "Agatha", "Aggipah Mountain", "Almota, WA", "Alsea, OR",
-            "American Ridge", "Anderson", "Angel Ridge",
-            "Andersonville Prison", "Arrow", "Asotin", "Ahsahka", "Aspendale",
-            "Bald Mountain", "Beals Butte", "Bear Creek", "Beartrack Creek",
-            "Beeson Meadows", "Benewah County", "Bergen, Norway",
-            "Big Bear Ridge", "Bluestem, WA", "Bonanza", "Bovard", "Bovill",
-            "Box and Goose", "Burnt Ridge", "Buzzard Roost", "Bremerton, WA",
-            "Cameron", "Camp Kenjockety", "Cashup Davis Hotel", "Cavendish",
-            "Cedar Ridge", "Chatcolet Lake", "Chehalis, WA", "Cheney",
-            "Cherry Butte", "Christianson Meadow", "Clarkia", "Clarkston, WA",
-            "Clarksville", "Cloquet, Minnesota", "Collins", "Colton, WA",
-            "Coeur d'Alene", "Corral Creek", "Craigmont", "Cranbrook, BC",
-            "Crumarine Gulch", "Culdesac", "Cusick", "Deary", "Dogger",
-            "Driscoll Ridge", "Dry Ridge", "Dublin", "Dworshak Dam",
-            "Ellensburg", "Elk River", "Emida", "Endicott, WA", "Ephrata, WA",
-            "Fairview", "Fernwood", "Fix Ridge", "Fourmile Creek", "Frazier",
-            "Frederickson, WA", "Gang Saw", "Garfield", "Genesee",
-            "Ghormley Park", "Gifford", "Gilt Edge Mine", "Grangeville",
-            "Hampton", "Harvard", "Hatter Creek", "Heyburn Park", "Hayden",
-            "Helmer", "Hog Meadow Creek", "Hope", "Hoodoo",
-            "Hoodoo Mountains", "Hood River, WA", "Hoquiam, WA", "Howell",
-            "Idler's Rest", "Joel", "Juliaetta", "Kamiah", "Kelly Creek",
-            "Kendrick", "Ketchum", "Kibbie Dome", "Kooskia", "Kuna",
-            "Laclede", "Lake Gamlin", "Lake Waha", "Lapwai reservation",
-            "Larkins Peak", "Larkins Lake", "Leavenworth, WA", "Leland",
-            "Lewiston", "Linville", "Little Bear Ridge", "Lochsa River",
-            "Lolo Pass, MO", "Luella Mine", "McGary Butte", "Melrose Ridge",
-            "Metaline Falls", "Mica Mountain", "Mica Peak", "Mizpah Mine",
-            "Moeller", "Moose Creek", "Muscovite Mine", "Nespelem, WA",
-            "Nora", "Okanagan", "Omak", "Onaway", "Oviatt Meadows",
-            "Owyhee Mountains", "Paradise Ridge", "Parker", "Parma",
-            "Payette Lake", "Peck", "Pedicord Hotel", "Pembine", "Pocatello",
-            "Pomeroy", "Potato Hill", "Potlatch", "Preston", "Princeton",
-            "Pullman, WA", "Randall Flat", "Randall Flat Creek",
-            "Reardan, WA", "Rexburg", "Ridenbaugh Canal", "Riparia",
-            "Ritzville, WA", "Rosalia, WA", "Rosenstein Store",
-            "Saint Maries", "Sacheen Lake", "Salubria", "Sand Mountain",
-            "Sausalito, CA", "Scoville", "Selway-Bitterroot Wilderness",
-            "Shea Meadows", "Silverton, OR", "Slabtown",
-            "Snoqualmie Falls, WA", "Sodaville, OR", "Sotin Creek",
-            "Spangle, WA", "Southwick", "Spalding", "Spokane, WA",
-            "Steptoe Butte", "Stites", "Swamp Creek", "Teakean Butte",
-            "Tensed", "Texas Ridge", "Tomer Butte", "Toppenish, WA", "Troy",
-            "Uniontown, WA", "Vassar Meadows", "Viola", "Vollmer",
-            "Waha Lake", "Walla Walla, WA", "Wenatchee, WA", "Weiser",
-            "West Fork", "White Bird", "Whitmore School", "Wilson Creek",
-            "Woodfell", "Yale", "Yreka Mining District",
+            "caldwell", "idaho falls", "pocatello", "rupert", "boise",
+            "nampa", "emmett", "twin falls", "burley", "moscow", "lewiston",
+            "mountain home", "blackfoot", "post falls", "sandpoint",
+            "jerome, idaho", "weiser", "eagle, idaho", "middleton",
+            "rathdrum", "bonners ferry", "st. maries", "spirit lake",
+            "glenns ferry", "parma", "kimberly", "st. anthony", "gooding",
+            "mccall, idaho", "driggs", "american falls", "grangeville",
+            "fountain, idaho", "acequia", "albion", "arco", "athol",
+            "bellevue", "bloomington", "bruneau", "buhl", "challis",
+            "clayton", "clifton", "cottonwood", "council, idaho", "crouch",
+            "culdesac", "dayton, idaho", "dover", "downey", "drummond",
+            "dubois", "elk city", "fairfield", "fenn", "fernwood",
+            "fort hall", "fruitland", "garden city", "genesee", "greenleaf",
+            "hagerman", "hansen, idaho", "hazelton", "heyburn", "holbrook",
+            "homedale", "horseshoe bend", "huetter", "huston, idaho", "inkom",
+            "iona", "julietta", "kamiah", "kendrick, idaho", "ketchum",
+            "kooskia", "kootenai", "kuna", "lapwai", "lava hot springs",
+            "leadore", "lemhi", "letha", "lost river", "mackay", "malad city",
+            "malta", "marsing", "melba, idaho", "menan", "mink creek",
+            "montpelier", "monteview", "montour", "moore, idaho",
+            "mountain home afb", "mud lake", "mullan", "murtaugh", "newdale",
+            "new meadows", "new plymouth", "nezperce, idaho", "notus",
+            "oakley", "oldtown", "onaway", "orofino", "osburn, idaho",
+            "parker", "parkline", "payette", "peck", "picabo", "pinehurst",
+            "placerville", "plummer", "pollock", "potlatch", "preston",
+            "priest lake", "priest river", "rexburg", "richfield", "rigby",
+            "rimini", "riverside", "rockford", "rockland", "sagle",
+            "shelley, idaho", "shoshone", "smelterville", "soda springs",
+            "spalding", "spencer", "stanley, idaho", "sugar city",
+            "sun valley", "swan valley", "terry, idaho", "teton", "tetonia",
+            "troy, idaho", "uhland", "victor, idaho", "wallace, idaho",
+            "wardner", "warm river", "weippe", "wendell", "weston",
+            "white bird", "wilder", "winchester", "worley",
+            "agatha", "aggipah mountain", "almota", "alsea",
+            "american ridge", "anderson", "angel ridge", "andersonville prison",
+            "arrow", "asotin", "ahsahka", "aspendale", "bald mountain",
+            "beals butte", "bear creek", "beartrack creek", "beeson meadows",
+            "benewah county", "bergen, norway", "big bear ridge", "bluestem",
+            "bonanza", "bovard", "bovill", "box and goose", "burnt ridge",
+            "buzzard roost", "bremerton", "cameron", "camp kenjockety",
+            "cashup davis hotel", "cavendish", "cedar ridge", "chatcolet lake",
+            "chehalis", "cheney", "cherry butte", "christianson meadow",
+            "clarkia", "clarkston", "clarksville", "cloquet, minnesota",
+            "collins", "colton", "coeur d'alene", "corral creek", "craigmont",
+            "cranbrook, bc", "crumarine gulch", "cusick", "deary", "dogger",
+            "driscoll ridge", "dry ridge", "dublin", "dworshak dam", "ellensburg",
+            "elk river", "emida", "endicott", "ephrata", "fairview",
+            "fix ridge", "fourmile creek", "frazier", "frederickson",
+            "gang saw", "garfield", "ghormley park", "gifford", "gilt edge mine",
+            "hampton", "harvard", "hatter creek", "heyburn park", "hayden",
+            "helmer", "hog meadow creek", "hope", "hoodoo", "hoodoo mountains",
+            "hood river", "hoquiam", "howell", "idler's rest", "joel",
+            "juliaetta", "kelly creek", "kibbie dome", "laclede", "lake gamlin",
+            "lake waha", "lapwai reservation", "larkins peak", "larkins lake",
+            "leavenworth", "leland", "linville", "little bear ridge",
+            "lochsa river", "lolo pass, mo", "luella mine", "mcgary butte",
+            "melrose ridge", "metaline falls", "mica mountain", "mica peak",
+            "mizpah mine", "moeller", "moose creek", "muscovite mine",
+            "nespelem", "nora", "okanagan", "omak", "oviatt meadows",
+            "owyhee mountains", "paradise ridge", "payette lake", "pedicord hotel",
+            "pembine", "pomeroy", "potato hill", "princeton", "pullman",
+            "randall flat", "randall flat creek", "reardan", "ridenbaugh canal",
+            "riparia", "ritzville", "rosalia", "rosenstein store",
+            "saint maries", "sacheen lake", "salubria", "sand mountain",
+            "sausalito", "scoville", "selway-bitterroot wilderness",
+            "shea meadows", "silverton", "slabtown", "snoqualmie falls",
+            "sodaville", "sotin creek", "spangle", "southwick",
+            "spokane", "steptoe butte", "stites", "swamp creek",
+            "teakean butte", "tensed", "texas ridge", "tomer butte",
+            "toppenish", "uniontown", "vassar meadows", "viola",
+            "vollmer", "waha lake", "walla walla", "wenatchee",
+            "west fork", "whitmore school", "wilson creek", "woodfell", "yale",
+            "yreka mining district",
         ],
     },
-    "LCOH Play / Games": {
+    "LCOH Play": {
         "enabled": True,
         "terms": [
             "Andy Over", "Basket Socials", "Bean Bake", "Bierstammtisch",
@@ -1046,26 +1215,52 @@ def get_tags_column_index(df):
     return last_populated_idx + 1
 
 
-def insert_tags_column(df, tags_series):
+def insert_tags_and_terms_columns(df, tags_series, terms_series):
+    """
+    Insert 'tags' then 'terms' immediately after the last populated
+    column in *df* (as located by get_tags_column_index). If df already
+    has two columns sitting in that slot (e.g. this file is being
+    re-tagged after already having tags/terms written once), they are
+    replaced rather than duplicated -- the generalized version of the
+    single-column function's target_idx + 1 skip, now skipping the two
+    columns we're inserting.
+    """
     target_idx = get_tags_column_index(df)
 
     tags_col = pd.Series(tags_series.values, index=df.index, name='tags')
+    terms_col = pd.Series(terms_series.values, index=df.index, name='terms')
     left = df.iloc[:, :target_idx]
-    right = df.iloc[:, target_idx + 1:]
-    return pd.concat([left, tags_col, right], axis=1)
+    right = df.iloc[:, target_idx + 2:]
+    return pd.concat([left, tags_col, terms_col, right], axis=1)
 
 # ============================================================
 # ROW-LEVEL TAGGING (write B/)
 # ============================================================
 
-def tag_row(text):
+def tag_and_terms_for_row(text):
+    """
+    Scan a single row's text once for both the parent tags it matches
+    and the specific child terms responsible for each match.
+
+    Returns a (tags_str, terms_str) pair, each ';'-joined:
+      tags_str  -- matched tag names, in TAGS iteration order.
+      terms_str -- matched terms, in the order first encountered, using
+                   each term's original casing as written in TAGS. A
+                   term is listed once even if it occurs multiple times
+                   in the row's text, or matches under more than one tag
+                   (e.g. "spalding" is a term shared by both the
+                   "geographic" and "LCOH Places" tags).
+    """
     if not isinstance(text, str) or not text:
-        return ''
+        return '', ''
     lowered = text.lower()
-    matched = []
+    matched_tags = []
+    matched_terms = []
+    seen_terms = set()
     for tag_name, tag_data in TAGS.items():
         if not tag_data.get("enabled", True):
             continue
+        tag_hit = False
         for term in tag_data["terms"]:
             term_l = term.lower()
             if ' ' in term_l:
@@ -1073,14 +1268,20 @@ def tag_row(text):
             else:
                 found = re.search(r'\b' + re.escape(term_l) + r'\b', lowered) is not None
             if found:
-                matched.append(tag_name)
-                break
-    return ';'.join(matched)
+                tag_hit = True
+                if term_l not in seen_terms:
+                    seen_terms.add(term_l)
+                    matched_terms.append(term)
+        if tag_hit:
+            matched_tags.append(tag_name)
+    return ';'.join(matched_tags), ';'.join(matched_terms)
 
 
 for file_name, df in dfs.items():
-    tags_series = df[TEXT_COLUMN].fillna('').astype(str).apply(tag_row)
-    tagged_df = insert_tags_column(df, tags_series)
+    row_results = df[TEXT_COLUMN].fillna('').astype(str).apply(tag_and_terms_for_row)
+    tags_series = row_results.apply(lambda pair: pair[0])
+    terms_series = row_results.apply(lambda pair: pair[1])
+    tagged_df = insert_tags_and_terms_columns(df, tags_series, terms_series)
     output_path = os.path.join(B_DIR, file_name)
     tagged_df.to_csv(output_path, index=False)
     print(f"Wrote tagged file: {output_path}")
@@ -1135,3 +1336,42 @@ for row in tally_rows:
         current_tag = row['tag']
         print(f"\n## {current_tag}")
     print(f"{row['term']}: {row['count']}")
+
+# ============================================================
+# PER-FILE TAG + TERM TALLY (write C/)
+# ============================================================
+
+file_tally_lines = []
+for file_name in all_b_files:
+    file_stem = os.path.splitext(file_name)[0]
+
+    file_tag_rows = []
+    try:
+        b_df = pd.read_csv(os.path.join(B_DIR, file_name), encoding='utf-8', quotechar='"', escapechar='\\')
+        if TEXT_COLUMN in b_df.columns:
+            file_words_series = b_df[TEXT_COLUMN].fillna('').astype(str).str.lower().str.strip()
+            file_corpus = ' '.join(file_words_series) + ' '
+            for tag_name, tag_data in TAGS.items():
+                if not tag_data.get("enabled", True):
+                    continue
+                term_counts = find_tag_terms(file_corpus, tag_data["terms"])
+                if term_counts:
+                    file_tag_rows.append((tag_name, sum(term_counts.values()), term_counts))
+    except Exception as e:
+        print(f"Error reading {file_name} from B/ for per-file tally: {e}")
+
+    file_tag_rows.sort(key=lambda r: r[0].lower())
+
+    file_tally_lines.append(file_stem)
+    file_tally_lines.append('')
+    for tag_name, tag_total, term_counts in file_tag_rows:
+        file_tally_lines.append(f"{tag_name}: {tag_total}")
+        for term, count in sorted(term_counts.items(), key=lambda kv: -kv[1]):
+            file_tally_lines.append(f"{term}: {count}")
+    file_tally_lines.append('')
+
+file_tally_output_path = os.path.join(C_DIR, 'tag_tally_by_file.csv')
+with open(file_tally_output_path, 'w', encoding='utf-8') as f:
+    f.write('\n'.join(file_tally_lines).rstrip('\n') + '\n')
+
+print(f"\nWrote per-file tag/term tally: {file_tally_output_path}")
