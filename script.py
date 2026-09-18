@@ -16,8 +16,8 @@ C_DIR = os.path.join(BASE_DIR, "C")
 for folder in (A_DIR, B_DIR, C_DIR):
     os.makedirs(folder, exist_ok=True)
 
-USE_ENGLISH_STOPWORDS = False
-USE_SPANISH_STOPWORDS = True
+USE_ENGLISH_STOPWORDS = True
+USE_SPANISH_STOPWORDS = False
 USE_FRENCH_STOPWORDS = False
 USE_PORTUGUESE_STOPWORDS = False
 USE_GERMAN_STOPWORDS = False
@@ -582,7 +582,7 @@ TAGS = {
         ],
     },
     "geographic": {
-        "enabled": False,
+        "enabled": True,
         "terms": [
             "caldwell", "idaho falls", "pocatello", "rupert", "boise",
             "nampa", "emmett", "twin falls", "burley", "moscow", "lewiston",
@@ -1037,10 +1037,6 @@ filtered_words = [w for w in cleaned_corpus.split() if w not in stop_words and l
 word_freq = Counter(filtered_words)
 top_distinctive_words = word_freq.most_common(100)
 
-# ============================================================
-# TAGS COLUMN PLACEMENT
-# ============================================================
-
 def get_tags_column_index(df):
     last_populated_idx = -1
     for idx, col in enumerate(df.columns):
@@ -1052,16 +1048,11 @@ def get_tags_column_index(df):
 
 def insert_tags_column(df, tags_series):
     target_idx = get_tags_column_index(df)
-    df = df.copy()
-    if target_idx < len(df.columns):
-        # Reuse an existing empty column at that position
-        df.iloc[:, target_idx] = tags_series.values
-        cols = list(df.columns)
-        cols[target_idx] = 'tags'
-        df.columns = cols
-    else:
-        df.insert(target_idx, 'tags', tags_series.values)
-    return df
+
+    tags_col = pd.Series(tags_series.values, index=df.index, name='tags')
+    left = df.iloc[:, :target_idx]
+    right = df.iloc[:, target_idx + 1:]
+    return pd.concat([left, tags_col, right], axis=1)
 
 # ============================================================
 # ROW-LEVEL TAGGING (write B/)
