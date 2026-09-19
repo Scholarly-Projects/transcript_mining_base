@@ -26,7 +26,7 @@ The tool was subsequently refined through work with the [Context Podcast Collect
 
 ## How It Works
 
-The script uses **63 distinct text-mining dictionaries containing approximately 3,500 terms**. It:
+The script uses **64 distinct text-mining dictionaries containing approximately 3,500 terms**. It:
 
 - Surveys transcripts placed in the `A` folder.
 - Produces tagged versions in the `B` folder.
@@ -43,7 +43,7 @@ Tag sections can be turned on or off to accommodate categories that are particul
 
 <br>
 
-Overall, the tool provides a consistent and flexible method to enrich oral history transcripts with detailed, dialogue-level metadata and understand a collection's underlying themes and connections from a holistic perspective.
+Overall, the tool provides a consistent and flexible method to enrich oral history transcripts with detailed, dialogue-level metadata and understand a collection's underlying themes and connections from a holistic vantage point.
 
 <br>
 

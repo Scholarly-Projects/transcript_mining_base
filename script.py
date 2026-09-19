@@ -154,20 +154,35 @@ TAGS = {
             "thrift", "underwear", "uniform", "wardrobe", "workwear",
         ],
     },
+    "conflict": {
+        "enabled": True,
+        "terms": [
+            "air force", "ammunition", "army", "battalion", "battle", "canon",
+            "casualty", "colonialism", "combat", "concentration camp",
+            "conscription", "deserter", "displacement", "exile",
+            "fighter pilot", "forced migration", "forced relocation", "forced removal",
+            "garrison", "genocide", "infantry", "internment", "invasion",
+            "massacre", "martial law", "marines", "military", "military occupation",
+            "militia", "mutiny", "navy", "peace treaty",
+            "prisoner of war", "rebellion", "refugee", "reservation",
+            "resettlement", "retaliation", "revolt", "ROTC", "siege", "soldier",
+            "troops", "war", "warfare", "warship", "wounded",
+        ],
+    },
     "crime": {
         "enabled": True,
         "terms": [
-            "addiction", "arrest", "arson", "assault", "bribery", "burglary",
-            "conviction", "corruption", "crime", "detective", "detention",
+            "addiction", "arrest", "arson", "assault", "bootleg", "bribery", "burglary",
+            "chain gang", "conviction", "corruption", "crime", "detective", "detention",
             "distribution", "domestic violence", "drugs", "embezzlement",
             "extortion", "forensics", "forgery", "fraud", "gambling", "gangs",
-            "homicide", "identity theft", "illegal immigration",
-            "imprisonment", "interrogation", "investigation",
-            "money laundering", "murder", "officer", "parole", "plea bargain",
-            "police", "possession", "probation", "prostitution",
-            "racketeering", "rape", "recidivism", "rehabilitation", "robbery",
-            "sentencing", "theft", "trafficking", "trial", "vandalism",
-            "violence",
+            "harass", "homicide", "identity theft", "illegal immigration",
+            "imprisonment", "interrogation", "investigation", "jail", "kill", "killer", "madame",
+            "money laundering", "moonshine", "murder", "murders", "murderer", "officer", "parole", "plea bargain",
+            "police", "possession", "prison", "prisoner", "probation", "prostitute", "prostitution",
+            "racketeering", "rape", "rapist", "recidivism", "rehabilitation", "robbery",
+            "sentencing", "stealing", "theft", "trafficking", "trial", "vandalism",
+            "violence", "whorehouse",
         ],
     },
     "culture": {
@@ -273,11 +288,11 @@ TAGS = {
             "chicken", "chocolate", "cider", "coffee", "cookies", "cornbread",
             "doughnuts", "eggs", "flapjacks", "fruit spread", "ham",
             "hardtack", "huckleberries", "ice cream", "jam", "jelly", "jerky",
-            "lard", "marmalade", "milk", "molasses", "moonshine", "mush",
+            "lard", "marmalade", "milk", "molasses", "mush",
             "mutton", "pepper", "pickles", "pie", "pork", "rabbit", "raisins",
             "root beer", "salad", "salmon", "salt", "salt pork",
             "sarsaparilla", "sausage", "soda", "sorghum", "soup", "sourdough",
-            "stew", "tea", "trout", "venison", "vinegar", "whiskey",
+            "stew", "tea", "trout", "venison", "vinegar", "whiskey", "wine",
         ],
     },
     "french": {
@@ -1222,58 +1237,40 @@ if not file_names:
 file_paths = [os.path.join(A_DIR, f) for f in file_names]
 
 def read_csv_robust(file_path):
-    """
-    Read *file_path* row by row with Python's csv module, instead of
-    pandas.read_csv.
-
-    Why: pandas.read_csv, when a data row has fewer comma-separated
-    fields than its header, packs that row's values into the first
-    columns from the left and silently pads the *last* column with NaN
-    -- with no warning. If the row's actually-missing field wasn't the
-    last one, every later column ends up holding a different row's
-    data, shifted one slot over. Reading row by row here sidesteps that
-    silent realignment: each row's own field count is checked directly
-    against the header's, so a short or long row is caught and reported
-    rather than guessed at.
-
-    Different transcript files are allowed to carry a different number
-    of columns -- one file might be a plain speaker/timestamp/words
-    export, another might already carry extra columns like "confidence"
-    or "notes" -- so this makes no assumption about column count at all;
-    it only checks that a given file's own rows are internally
-    consistent with that same file's own header.
-
-    Returns (dataframe, malformed) where malformed is a list of
-    (df_row_position, file_line_number, field_count) for any row whose
-    field count didn't match the header. Such a row is still included
-    in the returned dataframe -- padded or truncated to the header's
-    width so the file can be built at all -- but its position is
-    reported so the tagging step can flag it explicitly rather than
-    tag content it can't actually trust. The file itself is never
-    rejected over this; only that one row's tags/terms are affected.
-    """
+    
     with open(file_path, "r", newline="", encoding="utf-8") as f:
         reader = csv.reader(f, quotechar='"')
         header = next(reader, None)
         if not header:
-            return pd.DataFrame(), []
+            return pd.DataFrame(), [], None
 
         n_cols = len(header)
-        rows = []
-        malformed = []
+        raw_rows = []
         for file_line, row in enumerate(reader, start=2):
             if not row:
                 continue
-            if len(row) != n_cols:
-                malformed.append((len(rows), file_line, len(row)))
-                if len(row) < n_cols:
-                    row = row + [""] * (n_cols - len(row))
-                else:
-                    row = row[:n_cols]
-            rows.append(row)
+            raw_rows.append((file_line, row))
+
+    if not raw_rows:
+        return pd.DataFrame(columns=header), [], None
+
+    width_counts = Counter(len(row) for _, row in raw_rows)
+    dominant_width = width_counts.most_common(1)[0][0]
+    width_note = (n_cols, dominant_width) if dominant_width != n_cols else None
+
+    rows = []
+    malformed = []
+    for file_line, row in raw_rows:
+        if len(row) != dominant_width:
+            malformed.append((len(rows), file_line, len(row)))
+        if len(row) < n_cols:
+            row = row + [""] * (n_cols - len(row))
+        elif len(row) > n_cols:
+            row = row[:n_cols]
+        rows.append(row)
 
     df = pd.DataFrame(rows, columns=header)
-    return df, malformed
+    return df, malformed, width_note
 
 
 # --- Load new transcripts ------------------------------------------------
@@ -1282,18 +1279,28 @@ malformed_rows_by_file = {}  # file_name -> list of df row positions to flag
 for file_name, file_path in zip(file_names, file_paths):
     try:
         print(f"Processing: {file_path}")
-        df, malformed = read_csv_robust(file_path)
+        df, malformed, width_note = read_csv_robust(file_path)
         if TEXT_COLUMN not in df.columns:
             print(f"  Skipping {file_name}: no '{TEXT_COLUMN}' column found.")
             continue
 
+        if width_note:
+            header_width, dominant_width = width_note
+            print(
+                f"  Note: {file_name}'s header declares {header_width} column(s), "
+                f"but its rows consistently use {dominant_width} -- treating "
+                f"{dominant_width} as normal for this file and padding the "
+                f"unused trailing column(s)."
+            )
+
         if malformed:
             lines = ", ".join(str(m[1]) for m in malformed)
             print(
-                f"  Note: {file_name} has {len(malformed)} row(s) with the wrong "
-                f"number of fields (line(s) {lines}). The file is still being "
-                f"processed, but those specific row(s) will be flagged instead "
-                f"of tagged, since their column values can't be trusted."
+                f"  Note: {file_name} has {len(malformed)} row(s) that don't "
+                f"match this file's own normal field count (line(s) {lines}). "
+                f"The file is still being processed, but those specific row(s) "
+                f"will be flagged instead of tagged, since their column values "
+                f"can't be trusted."
             )
 
         dfs[file_name] = df
@@ -1312,25 +1319,7 @@ word_freq = Counter(filtered_words)
 top_distinctive_words = word_freq.most_common(100)
 
 def find_insertion_index(df):
-    """
-    Return the index of the first column in *df* that is entirely
-    empty across every row -- the natural place to write tags and
-    terms, since nothing else is using that column yet.
 
-    Different transcript files are expected to carry a different number
-    of already-populated columns: a plain speaker/timestamp/words file
-    has nothing to reuse and gets tags/terms appended right after
-    "words" (column D); a file that already carries extra populated
-    columns -- say, "confidence" and "notes" -- has no gap to reuse
-    either, and lands tags/terms after those instead (column F). A file
-    that already reserves an empty trailing column for future use gets
-    tags/terms slotted into that gap. This is computed fresh per file
-    rather than assumed fixed, which is what makes that flexible.
-
-    If every existing column has at least some data, there's no gap to
-    reuse, and this returns len(df.columns) -- append after the last
-    column instead.
-    """
     for idx, col in enumerate(df.columns):
         is_empty = (df[col].astype(str).str.strip() == "").all()
         if is_empty:
@@ -1339,16 +1328,7 @@ def find_insertion_index(df):
 
 
 def insert_tags_and_terms_columns(df, tags_series, terms_series):
-    """
-    Insert 'tags' and 'terms' at the first entirely-empty column in df
-    (see find_insertion_index above), so files with different numbers
-    of pre-existing columns each get tagged in the right spot instead
-    of assuming one fixed schema. If df already carries columns named
-    'tags' and 'terms' as its last two (e.g. this file was copied back
-    from B/ for re-tagging), those are dropped first so they get
-    replaced by the freshly computed ones rather than duplicated or
-    mistaken for a "column to reuse."
-    """
+
     if list(df.columns[-2:]) == ['tags', 'terms']:
         df = df.iloc[:, :-2]
 
@@ -1365,19 +1345,7 @@ def insert_tags_and_terms_columns(df, tags_series, terms_series):
 # ============================================================
 
 def tag_and_terms_for_row(text):
-    """
-    Scan a single row's text once for both the parent tags it matches
-    and the specific child terms responsible for each match.
 
-    Returns a (tags_str, terms_str) pair, each ';'-joined:
-      tags_str  -- matched tag names, in TAGS iteration order.
-      terms_str -- matched terms, in the order first encountered, using
-                   each term's original casing as written in TAGS. A
-                   term is listed once even if it occurs multiple times
-                   in the row's text, or matches under more than one tag
-                   (e.g. "spalding" is a term shared by both the
-                   "geographic" and "LCOH Places" tags).
-    """
     if not isinstance(text, str) or not text:
         return '', ''
     lowered = text.lower()
