@@ -32,3 +32,5 @@ for col in ('tags', 'terms'):
 df.to_csv(path, index=False)
 " "$f"
 done
+
+## If needed
