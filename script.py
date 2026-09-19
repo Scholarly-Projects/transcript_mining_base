@@ -1,3 +1,4 @@
+import csv
 import os
 import re
 import string
@@ -1220,16 +1221,83 @@ if not file_names:
 
 file_paths = [os.path.join(A_DIR, f) for f in file_names]
 
+def read_csv_robust(file_path):
+    """
+    Read *file_path* row by row with Python's csv module, instead of
+    pandas.read_csv.
+
+    Why: pandas.read_csv, when a data row has fewer comma-separated
+    fields than its header, packs that row's values into the first
+    columns from the left and silently pads the *last* column with NaN
+    -- with no warning. If the row's actually-missing field wasn't the
+    last one, every later column ends up holding a different row's
+    data, shifted one slot over. Reading row by row here sidesteps that
+    silent realignment: each row's own field count is checked directly
+    against the header's, so a short or long row is caught and reported
+    rather than guessed at.
+
+    Different transcript files are allowed to carry a different number
+    of columns -- one file might be a plain speaker/timestamp/words
+    export, another might already carry extra columns like "confidence"
+    or "notes" -- so this makes no assumption about column count at all;
+    it only checks that a given file's own rows are internally
+    consistent with that same file's own header.
+
+    Returns (dataframe, malformed) where malformed is a list of
+    (df_row_position, file_line_number, field_count) for any row whose
+    field count didn't match the header. Such a row is still included
+    in the returned dataframe -- padded or truncated to the header's
+    width so the file can be built at all -- but its position is
+    reported so the tagging step can flag it explicitly rather than
+    tag content it can't actually trust. The file itself is never
+    rejected over this; only that one row's tags/terms are affected.
+    """
+    with open(file_path, "r", newline="", encoding="utf-8") as f:
+        reader = csv.reader(f, quotechar='"')
+        header = next(reader, None)
+        if not header:
+            return pd.DataFrame(), []
+
+        n_cols = len(header)
+        rows = []
+        malformed = []
+        for file_line, row in enumerate(reader, start=2):
+            if not row:
+                continue
+            if len(row) != n_cols:
+                malformed.append((len(rows), file_line, len(row)))
+                if len(row) < n_cols:
+                    row = row + [""] * (n_cols - len(row))
+                else:
+                    row = row[:n_cols]
+            rows.append(row)
+
+    df = pd.DataFrame(rows, columns=header)
+    return df, malformed
+
+
 # --- Load new transcripts ------------------------------------------------
 dfs = {}  # file_name -> DataFrame
+malformed_rows_by_file = {}  # file_name -> list of df row positions to flag
 for file_name, file_path in zip(file_names, file_paths):
     try:
         print(f"Processing: {file_path}")
-        df = pd.read_csv(file_path, encoding='utf-8', quotechar='"', escapechar='\\')
+        df, malformed = read_csv_robust(file_path)
         if TEXT_COLUMN not in df.columns:
             print(f"  Skipping {file_name}: no '{TEXT_COLUMN}' column found.")
             continue
+
+        if malformed:
+            lines = ", ".join(str(m[1]) for m in malformed)
+            print(
+                f"  Note: {file_name} has {len(malformed)} row(s) with the wrong "
+                f"number of fields (line(s) {lines}). The file is still being "
+                f"processed, but those specific row(s) will be flagged instead "
+                f"of tagged, since their column values can't be trusted."
+            )
+
         dfs[file_name] = df
+        malformed_rows_by_file[file_name] = [m[0] for m in malformed]
     except Exception as e:
         print(f"Error with file {file_name}: {e}")
 
@@ -1243,31 +1311,53 @@ filtered_words = [w for w in cleaned_corpus.split() if w not in stop_words and l
 word_freq = Counter(filtered_words)
 top_distinctive_words = word_freq.most_common(100)
 
-def get_tags_column_index(df):
-    last_populated_idx = -1
+def find_insertion_index(df):
+    """
+    Return the index of the first column in *df* that is entirely
+    empty across every row -- the natural place to write tags and
+    terms, since nothing else is using that column yet.
+
+    Different transcript files are expected to carry a different number
+    of already-populated columns: a plain speaker/timestamp/words file
+    has nothing to reuse and gets tags/terms appended right after
+    "words" (column D); a file that already carries extra populated
+    columns -- say, "confidence" and "notes" -- has no gap to reuse
+    either, and lands tags/terms after those instead (column F). A file
+    that already reserves an empty trailing column for future use gets
+    tags/terms slotted into that gap. This is computed fresh per file
+    rather than assumed fixed, which is what makes that flexible.
+
+    If every existing column has at least some data, there's no gap to
+    reuse, and this returns len(df.columns) -- append after the last
+    column instead.
+    """
     for idx, col in enumerate(df.columns):
-        has_data = df[col].notna().any() and (df[col].astype(str).str.strip() != '').any()
-        if has_data:
-            last_populated_idx = idx
-    return last_populated_idx + 1
+        is_empty = (df[col].astype(str).str.strip() == "").all()
+        if is_empty:
+            return idx
+    return len(df.columns)
 
 
 def insert_tags_and_terms_columns(df, tags_series, terms_series):
     """
-    Insert 'tags' then 'terms' immediately after the last populated
-    column in *df* (as located by get_tags_column_index). If df already
-    has two columns sitting in that slot (e.g. this file is being
-    re-tagged after already having tags/terms written once), they are
-    replaced rather than duplicated -- the generalized version of the
-    single-column function's target_idx + 1 skip, now skipping the two
-    columns we're inserting.
+    Insert 'tags' and 'terms' at the first entirely-empty column in df
+    (see find_insertion_index above), so files with different numbers
+    of pre-existing columns each get tagged in the right spot instead
+    of assuming one fixed schema. If df already carries columns named
+    'tags' and 'terms' as its last two (e.g. this file was copied back
+    from B/ for re-tagging), those are dropped first so they get
+    replaced by the freshly computed ones rather than duplicated or
+    mistaken for a "column to reuse."
     """
-    target_idx = get_tags_column_index(df)
+    if list(df.columns[-2:]) == ['tags', 'terms']:
+        df = df.iloc[:, :-2]
+
+    target_idx = find_insertion_index(df)
+    left = df.iloc[:, :target_idx]
+    right = df.iloc[:, target_idx:]
 
     tags_col = pd.Series(tags_series.values, index=df.index, name='tags')
     terms_col = pd.Series(terms_series.values, index=df.index, name='terms')
-    left = df.iloc[:, :target_idx]
-    right = df.iloc[:, target_idx + 2:]
     return pd.concat([left, tags_col, terms_col, right], axis=1)
 
 # ============================================================
@@ -1318,6 +1408,14 @@ for file_name, df in dfs.items():
     row_results = df[TEXT_COLUMN].fillna('').astype(str).apply(tag_and_terms_for_row)
     tags_series = row_results.apply(lambda pair: pair[0])
     terms_series = row_results.apply(lambda pair: pair[1])
+
+    # Rows flagged by read_csv_robust had the wrong number of fields, so
+    # their column values can't be trusted -- mark them explicitly
+    # instead of tagging whatever ended up in the TEXT_COLUMN cell.
+    for row_pos in malformed_rows_by_file.get(file_name, []):
+        tags_series.iloc[row_pos] = "[ROW LENGTH MISMATCH -- needs manual review]"
+        terms_series.iloc[row_pos] = ""
+
     tagged_df = insert_tags_and_terms_columns(df, tags_series, terms_series)
     output_path = os.path.join(B_DIR, file_name)
     tagged_df.to_csv(output_path, index=False)
